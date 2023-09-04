@@ -1,27 +1,53 @@
-{{ $data := index .Site.Data .Site.Language.Lang }} {{ if $data.homepage.hero }}
-{{ with $data.homepage.hero }}
+{{ $data := index .Site.Data .Site.Language.Lang }} 
+{{ if $data.common.hero }}
+{{ with $data.common.hero }}
 
 <section class="hero">
   <div class="container">
     <div class="row">
       <div class="mx-auto text-center">
-        <h1>{{ .title }}</h1>
 
-        {{ if .sub_title  }}
-        <p class="text__sub">{{ .sub_title }}</p>
-        {{ end }}
-        
-        {{- partial "_timer.html" . -}}
-
-        {{ if .btns }}
-        <div class="btns">
-          {{ range .btns }}
-          <a href="{{ .link }}" class="btn"> {{ .label }} </a>
-          {{ end }}
+        <div class="hero__content">
+            <span class="hero__label">
+                <svg class="icon" width="16" height="16">
+                    <use xlink:href="#sparkle"></use>
+                </svg>
+                {{.label}}
+            </span>
+    
+            <h1 class="hero__header">{{ .title }}</h1>
+    
+            {{ if .sub_title  }}
+                <div class="hero__sub">{{ .sub_title }}</div>
+            {{ end }}
+    
+            <div class="hero__desc">
+               {{ .description }}
+            </div>
+    
+            {{ if .btns }}
+            <div class="btns">
+              {{ range .btns }}
+                <a href="{{ .link }}" class="btn"> 
+                    <b>
+                        <svg class="icon" width="16" height="16">
+                            <use xlink:href="#arr-rt"></use>
+                        </svg>
+                    </b>
+                    {{ .label }} 
+                </a>
+              {{ end }}
+            </div>
+            {{ end }}
         </div>
-        {{ end }}
+
+        <div class="hero__background">
+            <img src="{{ .img | relURL }}" alt="{{ .title }}">
+        </div>
+ 
       </div>
     </div>
   </div>
 </section>
-{{ end }} {{ end }}
+{{ end }} 
+{{ end }}

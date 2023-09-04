@@ -11,9 +11,14 @@
 {{ "<!-- End of Hero Section -->" | safeHTML }}
 
 
-{{- partial "header.html" . -}}
 
 <div class="page__content">
+
+    <article class="hero__wrap">
+        {{- partial "header.html" . -}}
+        {{- partial "_hero.html" . -}}
+    </article>
+
     <article class="article_1">
         {{ .Scratch.Set "label" "Introduction" }}
         {{- partial "_hgroup.html" . -}}
@@ -109,7 +114,4 @@
 </article>
 
 </div>
-
-
-
 {{ end }}

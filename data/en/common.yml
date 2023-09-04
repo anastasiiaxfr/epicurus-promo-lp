@@ -5,7 +5,7 @@ hero:
   sub_title: For Investors, People, Enthusiasts
   description: Epicurus is a simple ecosystem of interconnected crypto products designed for the mass adoptation of cryptocurrencies.
   label: Welcome to Epicurus
-  img: ''
+  img: '../images/hero-img.svg'
   btns:
     - label: Get Started Now!
       link: "#"

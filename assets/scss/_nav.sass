@@ -7,7 +7,9 @@ header
         position: relative
 
 .navbar
-    +sz(100%, 100px)
+    +sz(100%, auto)
+    margin: 0
+    padding: 0
     &-menu
         +flex(flex, center, space-between, wrap)
         width: 100%
@@ -22,9 +24,6 @@ header
         &-close
             display: none
 
-    +miw($lg)
-        height: 150px
-                 
     +maw($md)
         position: relative
         height: auto

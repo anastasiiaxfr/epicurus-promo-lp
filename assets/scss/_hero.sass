@@ -6,20 +6,49 @@
         flex: 1 0 auto
         +flex(flex, center, center, nowrap)
         flex-direction: column
+        padding: $gap8*4 $gap8*6 0
+        background-color: $dark1
+        border-radius: $brs48
+        overflow: hidden
 
-    h1
-        margin-bottom: 0
+    &__header
+        +ft(122, 122, 600)
+        text-transform: initial
 
-    .text__sub
-        margin-top: 16px
-        margin-bottom: 40px
+    &__content
+        padding-top: 120px
+        padding-bottom: 120px
+
+    &__label
+        +flex(inline-flex, center, center, nowrap)
+        gap: $gap8
+        padding: 14px 16px
+        margin-bottom: 42px
+        background-color: $main
+        border-radius: 20pc
+        +ft(16, 16, 500)
+
+    &__sub
+        +ft(52, 52, 600)
+        color: $main
+
+    &__desc
+        max-width: 802px
+        margin: $gap8*4 auto
+        +ft(24, 24*1.7, 500)
+        letter-spacing: 0.02em
+        color: $grey2
+
+    &__img
+        position: absolute
+        inset: 0
 
     &__bg
         z-index: -1
         +ps(absolute, (t, 0), (b, 0), (r, 0), (l, 0))
+        margin: auto
         display: flex
         justify-content: center
-        margin: auto
         img
             position: absolute
             &:last-child
