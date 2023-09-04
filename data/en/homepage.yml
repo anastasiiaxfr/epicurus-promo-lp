@@ -1,0 +1,83 @@
+---
+section_1:
+  enable: true
+  type: video
+  direction: left
+  title: Join our perfect **Community**
+  text: Thanks to our academy, which contains courses in the basics of technical analysis, fundamental analysis and risk management. Our experts will share their knowledge and experience with you, helping you develop your trading skills. Courses include different levels of difficulty for beginners.
+  video: '#'
+  img: '../images/og.jpg'
+  btn:
+    label: Join Us Now
+    link: #
+
+section_2:
+  enable: true
+  type: img
+  direction: right
+  title: Innovative **Robotic Trading**
+  text: Robotic trading that allows investors to trade in the cryptocurrency market without the need for constant monitoring. Our algorithms use various indicators and strategies to determine the optimal entry and exit points for positions.
+  img: '../images/img-1.svg'
+  btn:
+    label: Learn More
+    link: # 
+
+section_3:
+  enable: true
+  type: img
+  direction: left
+  title: Fast and Easy **API Keys Management**
+  text: We enable investors to securely multiply their investments through API key management. Investors can monitor their investments and follow our analysts' trading progress on cryptocurrency exchanges safely and conveniently.
+  img: '../images/img-2.svg'
+  btn:
+    label: Learn More
+    link: # 
+
+section_4:
+  enable: true
+  type: img
+  direction: right
+  title: Incredible **Trust Management**
+  text: We enable investors to securely multiply their investments through API key management. Investors can monitor their investments and follow our analysts' trading progress on cryptocurrency exchanges safely and conveniently.
+  img: '../images/img-3.svg'
+  btn:
+    label: Learn More
+    link: # 
+
+section_5:
+  enable: true
+  type: img
+  direction: left
+  title: |
+    **Academy** that really educates
+  text: Thanks to our academy, which contains courses in the basics of technical analysis, fundamental analysis and risk management. Our experts will share their knowledge and experience with you, helping you develop your trading skills. Courses include different levels of difficulty for beginners, advanced and professional users.
+  img: '../images/img-4.svg'
+  btn:
+    label: Learn More
+    link: # 
+
+section_6:
+  enable: true
+  type: img
+  direction: right
+  title: | 
+    **Deposits** Based on **Smart Contracts**
+  text: Deposits based on smart contracts ensure the security of investments and guarantee automatic interest payments. Our deposits are based on the blockchain, which allows investors to control their investments and make a profit without intermediaries.
+  img: '../images/img-5.svg'
+  btn:
+    label: Learn More
+    link: # 
+
+
+section_7:
+  enable: true
+  items: 
+    - title: Four Innovative Tools
+      desc: They will help you to increase your budget easily
+      img: '../images/pic-1.svg'
+    - title: Easy Management
+      desc: You can easily create and manage the products you have chosen
+      img: '../images/pic-2.svg'
+    - title: Statistics Tracking
+      desc: Track and capture you profits with scatter charts
+      img: '../images/pic-3.svg'

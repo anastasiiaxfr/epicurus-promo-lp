@@ -1,0 +1,34 @@
+.card
+    @extend %card
+
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: $gap8*7
+
+    &__img
+        position: relative
+        padding-top: 75%
+        border-radius: $brs28
+        @extend %dot
+        &::after
+            +sz(150px, 150px)
+            filter: blur(75px)
+
+        img
+            position: absolute
+            inset: 0
+            +sz(100%, 100%)
+            object-fit: cover
+
+    &__content
+        padding: 30px 40px 60px
+        text-align: center
+
+    &__title
+        +ft(24, 24*1.2, 700)
+    
+    &__text
+        margin-top: $gap8*2
+        color: $grey1
+        +ft(16, 16*1.4, 400)

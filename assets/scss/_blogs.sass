@@ -1,0 +1,61 @@
+.blogs
+    position: relative
+    padding: $gap8*3
+    @extend %card
+    +flex(flex, center, center, nowrap)
+
+    &::before
+        content: ""
+        +sz(0, 0)
+        padding-top: 100%
+        
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: $gap8*7
+
+    &__content
+        position: relative
+        flex: 1
+        +flex(flex, center, space-between, nowrap)
+        flex-direction: column
+        height: 100%
+        padding: $gap8*3
+        text-align: center
+
+    &__title
+        +ft(26, 26*1.4, 700)
+        letter-spacing: 0.02em
+
+    &__img
+        position: absolute
+        inset: 0
+        +sz(100%, 100%)
+
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            +sz(100%, 100%)
+            background-color: rgba($dark4, 0.6)
+
+        img
+            position: absolute
+            inset: 0
+            margin: auto
+            +sz(calc(100% - 48px), calc(100% - 48px))
+            object-fit: cover
+            border-radius: $brs28
+
+    &__auth
+        +flex(flex, center, center, wrap)
+        gap: $gap8
+        +ft(16, 16*1.2, 700)
+
+        &_img
+            display: block
+            +sz(46px, 46px)
+            border-radius: 50%
+
+           
+

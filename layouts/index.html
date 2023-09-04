@@ -1,0 +1,115 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage }}
+<style>
+</style>
+{{ end }}
+
+
+{{ "<!-- Hero Section -->" | safeHTML }}
+{{ "<!-- End of Hero Section -->" | safeHTML }}
+
+
+{{- partial "header.html" . -}}
+
+<div class="page__content">
+    <article class="article_1">
+        {{ .Scratch.Set "label" "Introduction" }}
+        {{- partial "_hgroup.html" . -}}
+    
+
+        {{ "<!-- Section -->" | safeHTML }}
+        {{ if $data.homepage.section_1 }} 
+        {{ with $data.homepage.section_1 }}
+            {{- partial "_section-1.html" . -}}
+        {{ end }}
+        {{ end }}
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+  
+        {{ .Scratch.Set "label" "Workflow" }}
+        {{ .Scratch.Set "title" "Discover Our Unique Products" }}
+        {{- partial "_hgroup.html" . -}}
+
+        {{ "<!-- Section -->" | safeHTML }}
+        {{ if $data.homepage.section_2 }} 
+        {{ with $data.homepage.section_2 }}
+            {{- partial "_section-1.html" . -}}
+        {{ end }}
+        {{ end }}
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+        {{ "<!-- Section -->" | safeHTML }}
+        {{ if $data.homepage.section_3 }} 
+        {{ with $data.homepage.section_3 }}
+            {{- partial "_section-1.html" . -}}
+        {{ end }}
+        {{ end }}
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+        {{ "<!-- Section -->" | safeHTML }}
+        {{ if $data.homepage.section_4 }} 
+        {{ with $data.homepage.section_4 }}
+            {{- partial "_section-1.html" . -}}
+        {{ end }}
+        {{ end }}
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+        {{ "<!-- Section -->" | safeHTML }}
+        {{ if $data.homepage.section_5 }} 
+        {{ with $data.homepage.section_5 }}
+            {{- partial "_section-1.html" . -}}
+        {{ end }}
+        {{ end }}
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+        {{ "<!-- Section -->" | safeHTML }}
+        {{ if $data.homepage.section_6 }} 
+        {{ with $data.homepage.section_6 }}
+            {{- partial "_section-1.html" . -}}
+        {{ end }}
+        {{ end }}
+        {{ "<!-- End of Section -->" | safeHTML }}
+   
+
+        {{ "<!-- Section -->" | safeHTML }}
+        {{ .Scratch.Set "label" "Benefits" }}
+        {{ .Scratch.Set "title" "Experience New Possibilities" }}
+        {{- partial "_hgroup.html" . -}}
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+        {{ "<!-- Section -->" | safeHTML }}
+        {{ if $data.homepage.section_7 }} 
+        {{ with $data.homepage.section_7 }}
+            {{- partial "_section-2.html" . -}}
+        {{ end }}
+        {{ end }}
+        {{ "<!-- End of Section -->" | safeHTML }}
+</article>
+
+<article class="article_1">
+    {{ "<!-- Section -->" | safeHTML }}
+    {{ .Scratch.Set "label" "Our Blog" }}
+    {{ .Scratch.Set "title" "Explore More About Us" }}
+    {{- partial "_hgroup.html" . -}}
+    {{ "<!-- End of Section -->" | safeHTML }}
+
+    {{ "<!-- Section -->" | safeHTML }}
+        {{- partial "_section-3.html" . -}}
+    {{ "<!-- End of Section -->" | safeHTML }}
+</article>
+
+<article>
+    {{ if $data.common.subscribe }} 
+    {{ with $data.common.subscribe }}
+        {{- partial "_subscribe.html" . -}}
+    {{ end }} 
+    {{ end }}
+</article>
+
+</div>
+
+
+
+{{ end }}

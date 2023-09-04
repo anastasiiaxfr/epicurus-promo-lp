@@ -1,0 +1,50 @@
+html, body 
+    height: 100%
+    //min-height: 100vh
+    font-family: $ffText
+    scroll-behavior: smooth
+
+body
+    background-color: $white
+    @extend %scroll
+
+
+*
+    //user-select: none
+    &::selection
+        background-color: $dark
+
+
+a
+    text-decoration: none
+    color: inherit
+    &:hover, &:focus
+        text-decoration: none
+        color: $black
+
+img
+    user-select: none
+
+button, a, input 
+    &:hover, &:active, &:focus
+        appearance: none
+        outline: none
+        box-shadow: none 
+
+
+.page
+    &__body
+        display: flex
+        flex-direction: column
+    &__wrapper
+        display: flex
+        flex: 1 0 auto
+        flex-wrap: nowrap
+        flex-direction: column
+    &__content
+        display: flex
+        flex-direction: column
+        gap: $gap8*4
+        max-width: var(--maw)
+        margin-left: auto
+        margin-right: auto

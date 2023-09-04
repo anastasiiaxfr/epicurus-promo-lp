@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{{- partial "head.html" . -}}
+
+<body lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" class="page__body">
+
+
+  <main class="page__wrapper">
+
+
+    {{- partial "preloader.html" . -}}
+    <div class="header-span"></div>
+
+
+    {{- block "main" . }}{{- end }}
+
+  </main>
+
+
+
+
+
+
+  {{ range .Site.Params.plugins.js }}
+  <script src="{{ .link | relURL }}"></script>
+  {{ end }}
+
+
+  {{ $script := resources.Get "js/script.js" | minify }}
+  <script src="{{ $script.Permalink | relURL }}?v={{ now.Format " 01-02-2006-14-52-26"}}"></script>
+
+  {{- partial "_svg.html" . -}}
+
+</body>
+</html>

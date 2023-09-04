@@ -1,0 +1,63 @@
+.container
+    max-width: var(--maw)
+
+.section
+    //padding: var(--gap100) 0
+
+    &_inner
+        display: grid
+        grid-template-columns: 1fr 1fr
+        align-items: center
+        gap: var(--gap160)
+
+        &.direction-left
+            div:last-child
+                order: -1
+
+    &_text
+        margin-top: $gap8*5
+        margin-bottom: $gap8*5
+        +ft(22, 22*1.7, 400)
+        color: $grey1
+
+    &_demo
+        @extend %dot
+        &::after
+            filter: blur(100px)
+
+        img
+            +sz(100%, 100%)
+            object-fit: contain
+
+        figure
+            position: relative
+            +flex(flex, center, center, nowrap)
+            padding-top: 75%
+            margin: 0
+            background-color: $dark
+            border-radius: $brs28
+            overflow: hidden
+
+            img, button
+                position: absolute
+                inset: 0
+                margin: auto
+
+            img
+                display: block
+                +sz(100%, 100%)
+                object-fit: cover
+                border-radius: $brs28
+                opacity: 0.5
+
+    &_subscribe
+        margin-top: var(--gap200)
+        margin-bottom: var(--gap200)
+        text-align: center
+        @extend %dot
+       
+
+.article
+    &_1
+        padding: var(--gap120)
+        @extend .bg_1

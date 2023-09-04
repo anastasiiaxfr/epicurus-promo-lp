@@ -1,0 +1,19 @@
+---
+hero:
+  enable: true
+  title: Innovative Platform
+  sub_title: For Investors, People, Enthusiasts
+  description: Epicurus is a simple ecosystem of interconnected crypto products designed for the mass adoptation of cryptocurrencies.
+  label: Welcome to Epicurus
+  img: ''
+  btns:
+    - label: Get Started Now!
+      link: "#"
+
+subscribe:
+  enable: true
+  title: Interested? Become a part of our **community!**
+  description: Register an account and activate a free 7-day period. No credit card required
+  btn:
+    label: 7 Days Free Trial
+    link: '#'

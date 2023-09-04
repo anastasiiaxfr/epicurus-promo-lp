@@ -1,0 +1,18 @@
+.logo
+    user-select: none
+
+    +maw($xs)
+        img
+            object-fit: contain
+
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(auto-fill,minmax(413px,1fr))
+        gap: 20px
+
+        +maw($xs)
+            grid-template-columns: 1fr
+
+    +maw($xs)
+        &__title
+            +ft(15, 15, 700)

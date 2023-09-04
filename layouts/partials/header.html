@@ -1,0 +1,19 @@
+<header>
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			
+			{{ .Scratch.Set "img" .Site.Params.logo }}
+			{{ .Scratch.Set "logo_h" "65" }}
+			{{ .Scratch.Set "logo_w" "52" }}
+			{{- partial "_logo.html" . -}}
+
+            <div class="d-inline-flex align-items-center" style="gap: 20px">
+                {{- partial "_switcher.html" . -}}
+                {{- partial "_lang.html" . -}}
+            </div>
+			
+
+		</div>
+	</nav>
+</header>
+

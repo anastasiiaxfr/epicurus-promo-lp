@@ -1,0 +1,15 @@
+{{ "<!-- Section -->" | safeHTML }}
+<section class="section section_subscribe">
+  <div class="col-xl-7 mx-auto">
+    <h3>
+        {{ .title | markdownify }}
+    </h3>  
+    <div class="text_subtitle">
+        {{ .description }}
+    </div>
+    <a href="{{ .btn.link }}" class="btn">
+        {{ .btn.label }}
+    </a>
+  </div>
+</section>
+{{ "<!-- End of Section -->" | safeHTML }}

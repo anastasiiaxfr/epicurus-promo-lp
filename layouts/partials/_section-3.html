@@ -1,0 +1,37 @@
+<section class="section">
+  <div class="blogs__wrap">
+    {{ with .Site.GetPage "section" "blogs" }} {{ range .Pages }}
+    <figure class="blogs">
+      <div class="blogs__img">
+        {{ if .Params.img }}
+        <img src="{{ .Params.img | relURL }}" alt="{{ .Params.title }}" />
+        {{ else }}
+        <img
+          src="{{ `../images/og.jpg` | relURL }}"
+          alt="{{ .Params.title }}"
+        />
+        {{ end }}
+      </div>
+      <figcaption class="blogs__content">
+        <div class="blogs__title">{{ .Title }}</div>
+        <div class="blogs__auth">
+            {{ if .Params.auth.img }}
+            <img
+              src="{{ .Params.auth.img | relURL }}"
+              alt="{{ .Params.auth.title }}"
+              class="blogs__auth_img"
+            />
+            {{ else }}
+            <img
+              src="{{ `../images/og.jpg` | relURL }}"
+              alt="{{ .Params.title }}"
+              class="blogs__auth_img"
+            />
+            {{ end }}
+          <span>{{ .Params.author.name }}</span>
+        </div>
+      </figcaption>
+    </figure>
+    {{ end }} {{ end }}
+  </div>
+</section>

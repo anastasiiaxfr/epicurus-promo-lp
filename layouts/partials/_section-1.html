@@ -1,0 +1,28 @@
+<section class="section">
+    <div class="section_inner direction-{{ .direction }}">
+
+        <div class="section_content">
+            <h3>{{ .title | markdownify }}</h3>
+            <div class="section_text">
+                {{ .text }}
+            </div>
+            <a href="{{ .btn.link }}" class="btn">{{ .btn.label }}</a>
+
+        </div>
+        <div class="section_demo">
+            {{ if eq .type "video" }}
+                <figure>
+                    <img src="{{ .img }}" alt="{{ .title }}">
+                    <button class="btn_play">
+                        <svg class="icon" width="16" height="16">
+                            <use xlink:href="#play"></use>
+                        </svg>
+                    </button>
+                </figure>
+                {{ else }}
+                <img src="{{ .img | relURL }}" alt="{{ .title | markdownify }}">
+            {{ end }}
+        </div>
+
+    </div>    
+</section>

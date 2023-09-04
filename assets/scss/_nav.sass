@@ -1,0 +1,74 @@
+header
+    +ps(absolute, (t, 0), (l, 0))
+    width: 100%
+    margin: 0
+
+    @media only screen and (orientation: landscape)
+        position: relative
+
+.navbar
+    +sz(100%, 100px)
+    &-menu
+        +flex(flex, center, space-between, wrap)
+        width: 100%
+    &-collapse
+        width: 100%
+    &-toggler
+        padding: 0
+        &:hover, &:focus, &:active
+            box-shadow: none
+        &-open, &-close 
+            fill: $grey1
+        &-close
+            display: none
+
+    +miw($lg)
+        height: 150px
+                 
+    +maw($md)
+        position: relative
+        height: auto
+        
+        .lang-switcher
+            button
+                width: 100%
+
+    +maw(460)
+        .logo img
+            +sz(60px, 60px)
+
+        #sign-in, #sign-up
+          
+            background: transparent
+            backdrop-filter: none
+        
+        .navbar-toggler
+            margin-left: 10px
+        
+    +maw($xs)
+        position: relative
+        &-toggler
+            &-open, &-close 
+                +sz(25px, 25px)
+  
+
+.nav
+    &-item
+        margin-right: $gap40
+        // &:last-of-type
+        //     margin-right: 0
+
+    &-link
+        color: inherit   
+        &:hover, &:active, &:focus
+            color: $white
+    +maw($md)
+        &-item
+            text-transform: uppercase
+            &:last-child
+                margin-right: 0
+    +maw($xs)
+        &-item
+            margin-right: 1em
+            font-size: 10px
+        

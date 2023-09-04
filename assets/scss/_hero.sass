@@ -1,0 +1,40 @@
+.hero
+    margin: auto
+
+    &__wrap
+        position: relative
+        flex: 1 0 auto
+        +flex(flex, center, center, nowrap)
+        flex-direction: column
+
+    h1
+        margin-bottom: 0
+
+    .text__sub
+        margin-top: 16px
+        margin-bottom: 40px
+
+    &__bg
+        z-index: -1
+        +ps(absolute, (t, 0), (b, 0), (r, 0), (l, 0))
+        display: flex
+        justify-content: center
+        margin: auto
+        img
+            position: absolute
+            &:last-child
+                top: auto
+                bottom: 0
+                right: auto
+                left: calc(50% - 402px)
+                max-width: 402px
+                width: 100%
+            &:first-child
+                top: 20%
+                left: 10%
+                right: 0
+                bottom: auto
+                margin: auto
+                width: 100px
+                transform: scale(2)
+  

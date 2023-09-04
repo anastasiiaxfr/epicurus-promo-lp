@@ -1,0 +1,57 @@
+h1, h2, h3, h4, h5, h6
+    user-select: none
+
+h1
+    margin-bottom: $gap8*2
+    color: inherit
+    +ft(40, 40*1.2, 700)
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    
+h2
+    margin-bottom: $gap8*2
+    +ft(96, 96*1.1, 500)
+
+h3
+    margin-bottom: $gap8*2
+    +ft(66, 66*1.4, 700)
+    b, strong
+        font-weight: inherit
+        color: $main
+
+    .section &
+        +ft(76, 76*1.1, 600)
+
+
+.text
+    &_subtitle
+        margin-top: $gap8*4
+        margin-bottom: $gap8*6
+        +ft(22, 22*1.7, 400)
+        color: $grey1      
+  
+.hgroup
+    margin-top: 130px
+    margin-bottom: 110px
+    text-align: center
+
+    &_single
+        margin: 0
+        margin-bottom: 80px
+
+    h1, h2, h3, h4, h5, h6
+        margin: 0
+        margin-top: 40px
+
+    &__label
+        +flex(inline-flex, center, center, nowrap)
+        gap: $gap8
+        padding: 14px 16px
+        border: 2px solid $main
+        border-radius: 20pc
+        +ft(16, 16, 500)
+        user-select: none
+
+
+
+
