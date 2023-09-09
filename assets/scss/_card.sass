@@ -3,8 +3,14 @@
 
     &__wrap
         display: grid
-        grid-template-columns: repeat(3, 1fr)
-        gap: $gap8*7
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        gap: $gap8*4
+        justify-content: center
+        margin-left: auto
+        margin-right: auto
+
+        +maw($xs)
+            grid-template-columns: 1fr
 
     &__img
         position: relative
@@ -22,13 +28,19 @@
             object-fit: cover
 
     &__content
-        padding: 30px 40px 60px
+        padding: 0 40px 30px
         text-align: center
+        +maw($xs)
+            padding: 0 5% 30px
 
     &__title
         +ft(24, 24*1.2, 700)
+        +maw($xs)
+            +ft(18, 18*1.2, 700)
     
     &__text
         margin-top: $gap8*2
         color: $grey1
         +ft(16, 16*1.4, 400)
+        +maw($xs)
+            +ft(12, 12*1.4, 400)

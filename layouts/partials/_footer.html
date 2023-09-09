@@ -1,0 +1,38 @@
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__info">
+      {{- partial "_logo.html" . -}}  
+      <div class="footer__info-text">
+        {{ .Site.Params.footer.copyright_text }}
+      </div>
+      {{- partial "_soc.html" . -}}  
+    </div>
+
+    <nav class="footer__menu">
+      {{ range .Site.Menus.footer }}
+      <div>
+        {{ if .HasChildren }}
+        <div class="footer__menu-group">
+          {{ .Name }}
+        </div>
+          {{ range .Children }}
+          <a class="" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          {{ end }}
+        {{ else }}
+          <a class="" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </nav>
+    
+  </div>  
+
+  <div class="footer__btm">
+    <p>{{ .Site.Params.footer.copyright | markdownify }}</p>
+    <nav class="footer__nav">
+      {{ range .Site.Params.nav }}
+        <li><a href="{{ .URL }}">{{ .title }}</a></li>
+      {{ end }}
+    </nav>
+  </div>
+</footer>

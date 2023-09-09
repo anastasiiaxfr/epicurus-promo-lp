@@ -6,18 +6,38 @@
         flex: 1 0 auto
         +flex(flex, center, center, nowrap)
         flex-direction: column
-        padding: $gap8*4 $gap8*6 0
-        background-color: $dark1
+        margin: 0 auto $gap8*4
+        padding: $gap8*4 $gap8*4 0
+        //background-color: $dark1
+        background: $dark1 url('../images/bg-hero.svg') no-repeat 50%/cover
         border-radius: $brs48
         overflow: hidden
 
+        +maw($md)
+            border-radius: $brs28
+
     &__header
-        +ft(122, 122, 600)
+        +ft(54, 54*1.4, 800)
         text-transform: initial
 
+        b, strong
+            color: $main
+
+        +maw($md)
+            +ft(32, 32*1.4, 800)
+
+        +maw($sm)
+            +ft(28, 28*1.4, 800)
+
+        +maw($xs)
+            +ft(24, 24*1.4, 800)
+
     &__content
-        padding-top: 120px
-        padding-bottom: 120px
+        max-width: 800px
+        margin-left: auto
+        margin-right: auto
+        padding-top: 5vmax
+        padding-bottom: 5vmax
 
     &__label
         +flex(inline-flex, center, center, nowrap)
@@ -29,19 +49,33 @@
         +ft(16, 16, 500)
 
     &__sub
-        +ft(52, 52, 600)
+        +ft(36, 36*1.4, 600)
         color: $main
+        +maw($md)
+            +ft(28, 28*1, 600)
+        +maw($sm)
+            +ft(20, 20*1, 800)
+            text-transform: uppercase
+            letter-spacing: 0.05em
 
     &__desc
-        max-width: 802px
+        max-width: 800px
         margin: $gap8*4 auto
-        +ft(24, 24*1.7, 500)
+        +ft(20, 20*1.4, 500)
         letter-spacing: 0.02em
         color: $grey2
+
+        +maw($md)
+            +ft(16, 16*1.4, 500)
 
     &__img
         position: absolute
         inset: 0
+
+    &__background
+        img
+            max-width: 1366px
+            width: 90%
 
     &__bg
         z-index: -1
@@ -52,18 +86,18 @@
         img
             position: absolute
             &:last-child
+                max-width: 402px
+                width: 100%
                 top: auto
                 bottom: 0
                 right: auto
                 left: calc(50% - 402px)
-                max-width: 402px
-                width: 100%
             &:first-child
+                width: 100px
+                margin: auto
                 top: 20%
                 left: 10%
                 right: 0
                 bottom: auto
-                margin: auto
-                width: 100px
                 transform: scale(2)
   

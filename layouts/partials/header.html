@@ -1,19 +1,13 @@
-<header>
-	<nav class="navbar navbar-expand-lg">
-		<div class="container">
+<header class="header">
+	<nav class="header-menu">
 			
-			{{ .Scratch.Set "img" .Site.Params.logo }}
-			{{ .Scratch.Set "logo_h" "42" }}
-			{{ .Scratch.Set "logo_w" "184" }}
-			{{- partial "_logo.html" . -}}
+		{{ .Scratch.Set "img" .Site.Params.logo }}
+		{{ .Scratch.Set "logo_h" "42" }}
+		{{ .Scratch.Set "logo_w" "184" }}
+		{{- partial "_logo.html" . -}}
 
-            <div class="d-inline-flex align-items-center" style="gap: 20px">
-                {{/*  {{- partial "_switcher.html" . -}}
-                {{- partial "_lang.html" . -}}  */}}
-                {{- partial "_btn-auth.html" . -}}
-            </div>
+		{{- partial "_btn-auth.html" . -}}
 
-		</div>
 	</nav>
 </header>
 

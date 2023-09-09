@@ -1,0 +1,9 @@
+<nav class="socials">
+   {{ range .Site.Params.social }}
+      <a href="{{ .link }}">
+         <svg class="icon" width="16" height="16">
+            <use xlink:href="#{{ .icon_sm }}"></use>
+         </svg>         
+      </a>
+   {{ end }}
+</nav>

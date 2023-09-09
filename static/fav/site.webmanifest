@@ -38,7 +38,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "https://epicurus-plp.netlify.app/",
+    "start_url": "https://epicurus.io/",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"

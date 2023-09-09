@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<div class="page__content">
+    <div class="container">
+        <article class="hero__wrap">
+            {{- partial "header.html" . -}}
+
+            {{ if $data.robotic_trading.hero }}
+            {{ with $data.robotic_trading.hero }}
+                {{- partial "_hero.html" . -}}
+            {{ end }} 
+            {{ end }}
+            
+        </article>
+    </div>
+</div>
+
+<section class="section_background">
+    <div class="">
+        {{ .Scratch.Set "label" "More Products" }}
+        {{ .Scratch.Set "title" "Check Out Other Products" }}
+        {{- partial "_hgroup.html" . -}}
+    </div>
+</section>
+
+
+<div class="container">
+    {{- partial "_footer.html" . -}}
+</div>
+{{ end }}

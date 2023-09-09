@@ -4,6 +4,7 @@
 	@include ps(fixed, (t, 0), (l, 0));
     z-index: 100500;
 	transition: $trs;
+	background-color: $dark;
 
     &-dots {
 

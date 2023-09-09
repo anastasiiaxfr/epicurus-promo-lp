@@ -1,8 +1,9 @@
 {{ $label := .Scratch.Get "label" }} 
 {{ $title := .Scratch.Get "title" }}
+{{ $margin := .Scratch.Get "margin" }}
 
-<hgroup class="hgroup {{ if not $title }} hgroup_single {{ end }}">
-  <div class="col-xl-6 mx-auto">
+<hgroup class="hgroup {{ if not $title }} hgroup__single {{ end }}">
+  <div class="hgroup__inner">
     <div class="hgroup__label">
         <svg class="icon" width="16" height="16">
           <use xlink:href="#sparkle"></use>
@@ -10,7 +11,7 @@
         {{$label}}
       </div>
       {{ with $title }}
-      <h2>{{ $title }}</h2>
+      <h2 class="hgroup__title">{{ $title }}</h2>
       {{ end }}
   </div>
 </hgroup>

@@ -1,0 +1,16 @@
+---
+hero:
+  enable: true
+  title: Organize your daily work with **Robotic Trading**
+  description: Robotic trading that allows investors to trade in the cryptocurrency market without the need for constant monitoring. Our algorithms use various indicators and strategies to determine the optimal entry and exit points for positions.
+  label: Robotic Trading
+  img: '../images/hero-robotic-trading.svg'
+  btns:
+    - label: Get Started Now
+      link: "#"
+      type: "bg"
+    - label: Learn More
+      link: "#"
+      type: "bd"
+
+

@@ -37,8 +37,8 @@ section_4:
   enable: true
   type: img
   direction: right
-  title: Incredible **Trust Management**
-  text: We enable investors to securely multiply their investments through API key management. Investors can monitor their investments and follow our analysts' trading progress on cryptocurrency exchanges safely and conveniently.
+  title: Innovative **Robotic Trading**
+  text: Earn on cryptocurrency market volatility in 3 clicks. Do not waste time setting up bots, we have already done setting up strategies. Just choose one or more bots to get more income.
   img: '../images/img-3.svg'
   btn:
     label: Learn More
@@ -49,8 +49,8 @@ section_5:
   type: img
   direction: left
   title: |
-    **Academy** that really educates
-  text: Thanks to our academy, which contains courses in the basics of technical analysis, fundamental analysis and risk management. Our experts will share their knowledge and experience with you, helping you develop your trading skills. Courses include different levels of difficulty for beginners, advanced and professional users.
+    Secure **Trust Management**
+  text: Control all the actions of your account manager and see the effectiveness of our trading strategies. Revoke API keys or return assets from management as soon as you need it.
   img: '../images/img-4.svg'
   btn:
     label: Learn More
@@ -62,12 +62,11 @@ section_6:
   direction: right
   title: | 
     **Deposits** Based on **Smart Contracts**
-  text: Deposits based on smart contracts ensure the security of investments and guarantee automatic interest payments. Our deposits are based on the blockchain, which allows investors to control their investments and make a profit without intermediaries.
+  text: Get a fixed income while your assets are working on the crypto market. The interest payment is guaranteed by the Ricarian smart contract. Automatic execution, protection by EU law.
   img: '../images/img-5.svg'
   btn:
     label: Learn More
     link: # 
-
 
 section_7:
   enable: true

@@ -1,13 +1,13 @@
 {{ "<!-- Section -->" | safeHTML }}
-<section class="section section_subscribe">
-  <div class="col-xl-7 mx-auto">
-    <h3>
+<section class="section section_background">
+  <div class="section_subscribe_inner">
+    <h2>
         {{ .title | markdownify }}
-    </h3>  
-    <div class="text_subtitle">
-        {{ .description }}
-    </div>
-    <a href="{{ .btn.link }}" class="btn">
+    </h2>  
+    <h6>
+      {{ .description }}
+    </h6>
+    <a href="{{ .btn.link }}" class="btn" role="button">
         {{ .btn.label }}
     </a>
   </div>

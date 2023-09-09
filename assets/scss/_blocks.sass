@@ -1,24 +1,46 @@
 .container
     max-width: var(--maw)
+    width: 100%
+    padding: 0
+    +maw($md)
+        max-width: 100%
 
 .section
-    //padding: var(--gap100) 0
-
     &_inner
         display: grid
         grid-template-columns: 1fr 1fr
         align-items: center
-        gap: var(--gap160)
+        gap: 5%
 
         &.direction-left
             div:last-child
                 order: -1
 
+        &.direction-right
+            img
+                margin-right: 0
+                margin-left: auto
+
+        +maw($md)
+            grid-template-columns: 1fr
+            &.direction-right
+                div:last-child
+                    order: -1
+                img
+                    margin: auto
+            img
+                margin-left: auto
+                margin-right: auto
+
     &_text
         margin-top: $gap8*5
         margin-bottom: $gap8*5
-        +ft(22, 22*1.7, 400)
+        +ft(17, 17*1.6, 400)
         color: $grey1
+        +maw($md)
+            margin-top: $gap8
+        +maw($xs)
+            +ft(14, 14*1.6, 400)
 
     &_demo
         @extend %dot
@@ -26,7 +48,9 @@
             filter: blur(100px)
 
         img
+            display: block
             +sz(100%, 100%)
+            max-width: 500px
             object-fit: contain
 
         figure
@@ -50,14 +74,43 @@
                 border-radius: $brs28
                 opacity: 0.5
 
-    &_subscribe
-        margin-top: var(--gap200)
-        margin-bottom: var(--gap200)
+        +maw($md)
+            max-width: 350px
+            margin-left: auto
+            margin-right: auto
+
+    &_content
+        +maw($md)
+            text-align: center
+
+    &_background
+        margin-top: var(--gap100)
+        margin-bottom: var(--gap100)
         text-align: center
         @extend %dot
+
+        &_inner
+            @extend .col-xl-7, .mx-auto
+
+    &_products
+        margin-top: var(--gap100)
+        margin-bottom: var(--gap100)
        
 
 .article
-    &_1
-        padding: var(--gap120)
-        @extend .bg_1
+    padding: 5%
+    @extend .bg_1
+
+    &__inner
+        margin: var(--gap50) 0
+        &:first-child
+            margin-top: 0
+        &:last-child
+            margin-bottom: 0
+        +maw($md)
+            margin: 100px auto
+        +maw($xs)
+            margin: 50px auto
+           
+
+    

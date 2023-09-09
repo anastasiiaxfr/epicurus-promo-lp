@@ -3,45 +3,70 @@ h1, h2, h3, h4, h5, h6
 
 h1
     margin-bottom: $gap8*2
-    color: inherit
-    +ft(40, 40*1.2, 700)
-    text-transform: uppercase
+    +ft(52, 52*1.2, 700)
     letter-spacing: 0.05em
+    text-transform: uppercase
     
 h2
-    margin-bottom: $gap8*2
-    +ft(96, 96*1.1, 500)
+    margin-top: 0
+    margin-bottom: 0
+    +ft(42, 42*1.2, 800)
 
-h3
-    margin-bottom: $gap8*2
-    +ft(66, 66*1.4, 700)
     b, strong
         font-weight: inherit
         color: $main
 
-    .section &
-        +ft(76, 76*1.1, 600)
+    +maw($md)
+        +ft(28, 28*1.4, 700)
+        text-transform: uppercase
 
+    +maw($sm)
+        +ft(26, 26*1.4, 700)
 
-.text
-    &_subtitle
-        margin-top: $gap8*4
-        margin-bottom: $gap8*6
-        +ft(22, 22*1.7, 400)
-        color: $grey1      
+    +maw($xs)
+        +ft(20, 20*1.4, 700)
+
+h3
+    margin-bottom: $gap8*2
+    +ft(42, 42*1.2, 800)
+
+    b, strong
+        font-weight: inherit
+        color: $main
+
+    +maw($lg)
+        +ft(28, 28*1.4, 700)
+
+    +maw($md)
+        +ft(28, 28*1.4, 700)
+   
+    +maw($sm)
+        +ft(26, 26*1.4, 700)
+
+    +maw($xs)
+        +ft(20, 20*1.4, 700)
+
+h6
+    margin-top: $gap8*2
+    margin-bottom: $gap8*4
+    +ft(17, 17*1.6, 400)
+    color: $grey1     
+
+    +maw($sm)
+        +ft(14, 14*1.4, 500) 
   
 .hgroup
-    margin-top: 130px
-    margin-bottom: 110px
     text-align: center
 
-    &_single
-        margin: 0
-        margin-bottom: 80px
+    &__single
+        @extend .mt-0
 
-    h1, h2, h3, h4, h5, h6
-        margin: 0
-        margin-top: 40px
+    &__inner
+        @extend .col-xl-8, .mx-auto
+
+    &__title
+        @extend .mt-3
+        letter-spacing: 0.05em
 
     &__label
         +flex(inline-flex, center, center, nowrap)
@@ -51,7 +76,10 @@ h3
         border-radius: 20pc
         +ft(16, 16, 500)
         user-select: none
-
+    
+    +maw($xs)
+        &__title
+            +ft(20, 20*1.4, 700)
 
 
 
