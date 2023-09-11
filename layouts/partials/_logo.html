@@ -7,10 +7,12 @@
 <a class="logo" href="{{ `/`| relLangURL }}">
    {{ if $.Site.Params.logo }}
 
-      <img src="{{ if eq $logo_mode "dark"  }} {{ $.Site.Params.logo_dark | absURL }} {{ else }} {{ $.Site.Params.logo | absURL }} {{ end }}" alt="{{ .Site.Params.site_name }}" {{ if $logo_w}} width="{{ $logo_w }}" height="{{ $logo_h }}" {{ end }}>
-   
+      <img src="{{ if eq $logo_mode "dark"  }} {{ $.Site.Params.logo_dark | absURL }} {{ else }} {{ $.Site.Params.logo | absURL }} {{ end }}" alt="{{ .Site.Params.site_name }}" {{ if $logo_w}} width="{{ $logo_w }}" height="{{ $logo_h }}" {{ end }} class="d-none d-sm-flex">
+
+      <img src="{{ $.Site.Params.logo_sm | relURL }}" alt="{{ .Site.Params.site_name }}" class="d-flex d-sm-none">
+
+    
       {{ else }}
       {{ $.Site.Params.site_name | markdownify }}
    {{ end }}
 </a>
-

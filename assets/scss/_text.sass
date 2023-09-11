@@ -67,6 +67,7 @@ h6
     &__title
         @extend .mt-3
         letter-spacing: 0.05em
+        text-transform: initial
 
     &__label
         +flex(inline-flex, center, center, nowrap)
@@ -76,6 +77,13 @@ h6
         border-radius: 20pc
         +ft(16, 16, 500)
         user-select: none
+
+        &--default
+            @extend .hgroup__label
+            background-color: $main
+
+    &__sub
+        @extend .hero__desc    
     
     +maw($xs)
         &__title

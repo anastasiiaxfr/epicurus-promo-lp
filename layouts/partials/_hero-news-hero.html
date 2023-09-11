@@ -1,0 +1,40 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.news.hero_news }}
+    {{ with $data.news.hero_news }}
+
+        <section class="hero">
+            <div class="container">
+            <div class="row">
+                <div class="hero__content">
+                    {{ if .label }}   
+                        <span span class="hero__label">
+                        <svg class="icon" width="16" height="16">
+                            <use xlink:href="#sparkle"></use>
+                        </svg>
+                        {{ .label }} 
+                        </span>
+                    {{ end }}
+                
+                    {{ if .sub_title  }}
+                        <div class="hero__sub">{{ .sub_title }}</div>
+                    {{ end }}
+                    <h1 class="hero__header">{{ .title | markdownify }}</h1>
+            
+                    <div class="hero__desc">
+                        {{ .description }}
+                    </div>
+                </div>
+                {{ "<!-- Section -->" | safeHTML }}
+                <div class="blogs__wrap">
+                    {{ range first 6 (where $.Site.RegularPages "Section" "news") }}
+                        {{- partial "_news-item.html" . -}}
+                    {{ end }}
+                    {{ "<!-- End of Section -->" | safeHTML }}
+                </div>
+            </div>
+            </div>
+        </section>
+
+    {{ end }} 
+{{ end }}

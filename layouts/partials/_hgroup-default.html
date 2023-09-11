@@ -1,0 +1,21 @@
+{{ $label := .Scratch.Get "label" }} 
+{{ $title := .Scratch.Get "title" }}
+{{ $sub_title := .Scratch.Get "sub_title" }}
+
+<hgroup class="hgroup row--1">
+  <div class="hgroup__inner">
+    {{ if $label }}   
+        <span span class="hgroup__label--default">
+        <svg class="icon" width="16" height="16">
+            <use xlink:href="#sparkle"></use>
+        </svg>
+        {{ $label }} 
+        </span>
+    {{ end }}
+             
+    <h1 class="hgroup__title">{{ $title | markdownify }}</h1>
+    {{ if $sub_title  }}
+        <div class="hgroup__sub">{{ $sub_title }}</div>
+    {{ end }}
+  </div>
+</hgroup>

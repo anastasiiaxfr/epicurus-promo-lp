@@ -1,0 +1,17 @@
+<a class="blogs" href="{{ .Permalink }}">
+    <div class="blogs__img">
+        {{ if .Params.img }}
+        <img src="{{ .Params.img | relURL }}" alt="{{ .Params.title }}" class="blogs__img" />
+        {{ else }}
+        <img src="{{ `/images/og.jpg` | relURL }}">
+        {{ end }}
+    </div>
+    <div class="blogs__content">
+       <div class="blogs__title">
+        {{ .Params.title | truncate 35 }}
+       </div>
+       <div class="blogs__auth">
+        {{ .Params.author }}
+       </div>
+    </div>
+</a>

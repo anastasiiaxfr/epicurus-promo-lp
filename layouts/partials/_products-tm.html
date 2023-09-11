@@ -1,0 +1,18 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<div class="product__wrap">
+    {{ if $data.trust_management }}
+    {{ with $data.trust_management }}
+        {{ range .products }}
+            <a class="product" href="{{ .link }}">
+                <div class="product__img">
+                    <img src="{{ .img | relURL }}" alt="{{ .title }}">
+                    <span class="product__title">
+                        {{ .title }}
+                    </span>
+                </div>
+            </a>
+        {{ end }}
+    {{ end }} 
+    {{ end }}
+</div>

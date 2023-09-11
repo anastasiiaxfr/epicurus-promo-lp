@@ -72,7 +72,7 @@ develop = "Anastasiia_Berest"
 author = "Epicurus"
 
 logo = "images/logo.svg"
-logo_dark = "images/logo.svg"
+logo_sm = "images/logo-sm.svg"
 logo_w = "116"
 
 site_name = "epicurus"
@@ -131,13 +131,13 @@ icon_sm = "ln"
     URL = "/"
 [[params.nav]]
     title = "About Us"
-    URL = "/about-us"
+    URL = "/"
 [[params.nav]]
     title = "Blogs"
-    URL = "/blogs"
+    URL = "/"
 [[params.nav]]
     title = "Products"
-    URL = "/products"
+    URL = "/"
 
 
 [[menu.footer]]
@@ -148,18 +148,23 @@ hasChildren = true
     [[menu.footer]]
     parent = "company"
     name = "About us"
-    URL = "/about-us"
+    URL = "/"
     weight = 1
     [[menu.footer]]
     parent = "company"
     name = "Careers"
-    URL = "/careers"
+    URL = "/"
     weight = 2
     [[menu.footer]]
     parent = "company"
     name = "Our Brand"
-    URL = "/our-brand"
+    URL = "/"
     weight = 3
+    [[menu.footer]]
+    parent = "company"
+    name = "News"
+    URL = "/"
+    weight = 4
 [[menu.footer]]
 name = "Ecosystem"
 weight = 2
@@ -168,27 +173,57 @@ hasChildren = true
     [[menu.footer]]
     parent = "ecosystem"
     name = "Roadmap"
-    URL = "/roadmap"
+    URL = "/"
     weight = 1
     [[menu.footer]]
     parent = "ecosystem"
     name = "For Investors"
-    URL = "/for-investors"
+    URL = "/"
     weight = 2
     [[menu.footer]]
     parent = "ecosystem"
     name = "Business Angel"
-    URL = "/business-angel"
+    URL = "/"
     weight = 3
     [[menu.footer]]
     parent = "ecosystem"
     name = "Partners"
-    URL = "/partners"
+    URL = "/"
     weight = 4
+
+
+[[menu.footer]]
+name = "Products"
+weight = 3
+identifier = "products"
+hasChildren = true 
+    [[menu.footer]]
+    parent = "products"
+    name = "Robotic Trading"
+    URL = "/"
+    weight = 1
+    [[menu.footer]]
+    parent = "products"
+    name = "Trust Management"
+    URL = "/"
+    weight = 2
+    [[menu.footer]]
+    parent = "products"
+    name = "Deposit"
+    URL = "/"
+    weight = 3
+    [[menu.footer]]
+    parent = "products"
+    name = "Academy"
+    URL = "/"
+    weight = 4
+
+
+
 
 [[menu.footer]]
 name = "Documentation"
-weight = 3
+weight = 4
 identifier = "documentation"
 hasChildren = true 
     [[menu.footer]]

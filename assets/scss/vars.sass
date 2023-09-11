@@ -23,6 +23,7 @@ $xlg: 1400
 $lg: 1100
 $md: 991
 $sm: 768
+$xsm: 560
 $xs: 480
 $xxs: 360
 
@@ -32,6 +33,7 @@ $trs: all 0.35s ease-in-out
 $brs: 20pc
 $brs48: 48px
 $brs28: 28px
+$brs10: 10px
 
 $gap120: 120px	
 $gap60: 60px
@@ -75,8 +77,6 @@ $gap8: 8px
         color: $balck
 
         
-
-
 =sz($w, $h)
     width: $w
     height: $h
@@ -223,7 +223,7 @@ $i: 0
     --gap100: 100px
     --gap50: 50px
     --maw: 1440px
-    +maw($sm)
+    +maw($md)
         --gap200: 100px
         --gap100: 50px
         --gap50: 50px
@@ -237,7 +237,7 @@ $i: 0
         background-color: $black
 
     &::-webkit-scrollbar-thumb
-        background: $black
+        background: $main
 
 
 %dot
@@ -264,6 +264,11 @@ $i: 0
     box-shadow: inset 0 0 150px 10px $black
     border-radius: $brs28
     overflow: hidden
+
+%text
+    background: linear-gradient(90deg,#2f2de8 -50%,#f539e5)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
 .bg
     &_1

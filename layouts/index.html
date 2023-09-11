@@ -12,16 +12,14 @@
 
 <div class="page__content">
     <div class="container">
+        {{ "<!-- Section -->" | safeHTML }}
         <article class="hero__wrap">
-            {{- partial "header.html" . -}}
-
-            {{ if $data.common.hero }}
-            {{ with $data.common.hero }}
-                {{- partial "_hero.html" . -}}
-            {{ end }} 
-            {{ end }}
+            {{ partial "header.html" . }}
+            {{ partial "_hero.html" . }}
         </article>
+        {{ "<!-- End of Section -->" | safeHTML }}
 
+        {{ "<!-- Section -->" | safeHTML }}
         <article class="article">
 
             <div>
@@ -63,12 +61,12 @@
             <div class="py-5">
                 {{ "<!-- Section -->" | safeHTML }}
                 {{ .Scratch.Set "label" "Benefits" }}
-                {{ .Scratch.Set "title" "New Investmnets Possibilities" }}
+                {{ .Scratch.Set "title" "New Investments Possibilities" }}
                 {{- partial "_hgroup.html" . -}}
                 {{ "<!-- End of Section -->" | safeHTML }}
             </div>
 
-            <div class="article__inner mt-0">
+             <div class="article__inner mt-0">
                 {{ "<!-- Section -->" | safeHTML }}
                 {{ if $data.homepage.section_7 }} 
                 {{ with $data.homepage.section_7 }}
@@ -78,9 +76,8 @@
                 {{ "<!-- End of Section -->" | safeHTML }}
             </div>
         </article>
-    </div>
+        {{ "<!-- End of Section -->" | safeHTML }}
 
-    <div class="container">
         {{ "<!-- Section -->" | safeHTML }}
         {{ if $data.common.subscribe }} 
         {{ with $data.common.subscribe }}

@@ -1,0 +1,55 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<div class="page__content">
+    <div class="container">
+
+        {{ "<!-- Section -->" | safeHTML }}
+        <article class="hero__wrap">
+            {{- partial "header.html" . -}}
+            {{- partial "_hero-tm.html" . -}}
+        </article>
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+        {{ "<!-- Section -->" | safeHTML }}
+        <article class="article">
+
+            <div>
+                {{ .Scratch.Set "label" "Introduction" }}
+                {{- partial "_hgroup.html" . -}}
+            </div>
+
+            <div class="article__inner">
+                {{ "<!-- Section -->" | safeHTML }}
+                {{ if $data.trust_management.section_1 }} 
+                {{ with $data.trust_management.section_1 }}
+                    {{- partial "_section-5.html" . -}}
+                {{ end }}
+                {{ end }}
+                {{ "<!-- End of Section -->" | safeHTML }}
+            </div>
+
+        </article>
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+    </div>
+</div>
+
+{{ "<!-- Section -->" | safeHTML }}
+<section class="section_background">
+  <div class="container">
+    
+    {{ .Scratch.Set "label" "More Products" }}
+    {{ .Scratch.Set "title" "Check Out Other Products" }}
+    {{- partial "_hgroup.html" . -}}
+
+    {{- partial "_products-tm.html" . -}}
+
+  </div>
+</section>
+{{ "<!-- End of Section -->" | safeHTML }}
+
+<div class="container">
+    {{- partial "_footer.html" . -}}
+</div>
+{{ end }}

@@ -1,19 +1,8 @@
 ---
-hero:
-  enable: true
-  title: Crypto Invetment Platform
-  sub_title: Legal. Safe. Secure
-  description: Take advantage of our investment tools and earn passive income. Strategies, risk and money management provided by Epicurus
-  label: Welcome to Epicurus
-  img: '../images/hero-img.svg'
-  btns:
-    - label: Get Started Now
-      link: "#"
-
 subscribe:
   enable: true
-  title: Interested? Become a part of our **community!**
-  description: Sign up for our Newsletter to stay up to date with all the happenings on our platform.
+  title: Interesting? Become a part of our **community**!
+  description: Sign up to receive new Epicurus updates
   btn:
     label: Subscribe to a Newsletter
-    link: '#'
+    link: 'Subscribe'

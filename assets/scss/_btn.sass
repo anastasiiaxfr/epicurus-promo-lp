@@ -9,7 +9,7 @@
     +flex(inline-flex, center, center, nowrap)
     gap: $gap8
     min-width: 160px
-    max-height: 58px
+    max-height: 50px
     //padding: 22px $gap16*3
     padding: 20px 30px
     background: $main
@@ -30,11 +30,14 @@
     
     b
         +flex(flex, center, center, nowrap)
-        +sz(42px, 42px)
-        margin-left: -21px
+        +sz(36px, 36px)
+        margin-left: -24px
         margin-right: $gap8
         background-color: $dark5
         border-radius: 50%
+
+    &--sm
+        height: 46px
 
     &--bd
         background: transparent
@@ -76,98 +79,12 @@
             +sz(16px, 16px)
 
     &_top
-        +ps(fixed, (r, 10px), (b, 10px))
+        +ps(fixed, (r, 16px), (b, 16px))
         +flex(flex, center, center, wrap)
         +sz(40px, 40px)
-        +theme(dark2)
+        border-radius: 50%
+        background-color: $main
         border: none
         svg
-            fill: $grey1
+            fill: $white
         
-.lang-switcher
-    button
-        +flex(flex, center, center, nowrap)
-        padding: 0
-        border: none
-        background: transparent
-        color: inherit
-        text-transform: uppercase
-        letter-spacing: 0.1em
-        svg
-            +sz(20px, 20px)
-    .dropdown-menu
-        min-width: 140px 
-        margin-top: 10px   
-        left: auto
-        right: 0
-        li button
-            width: 100%   
-            padding: 4px 8px
-            background: transparent
-            border: none
-            color: $grey1
-            text-transform: uppercase
-            &:hover, &:active, &:focus
-                color: $white
-    +maw($md)
-        button
-            padding: 0
-            background: transparent
-            &:hover, &:active, &:focus
-                background-color: transparent
-            svg
-                +sz(18px, 18px)
-                margin-right: 8px
-    +maw(480)
-        font-size: 12px
-
-.switch
-    position: relative
-    +flex(flex, center, center, nowrap)
-    +sz(54px, 28px)
-
-    &__slide
-        +flex(flex, center, space-between, nowrap)
-        +ps(absolute, (t, 0), (l, 0), (r, 0), (b, 0))
-        padding: 0 6px
-        border: 1px solid $white
-        border-color: inherit
-        border-radius: 18pc
-        transition: all .35s ease-in-out
-        cursor: pointer
-
-        svg
-            +sz(17px, 17px)
-            color: $black
-            &:last-of-type
-                color: $white
-
-        &::before
-            content: ""
-            +ps(absolute, (t, 0), (l, 4px), (b, 0))
-            z-index: -1
-            margin: auto
-            +sz(22px, 22px)
-           
-            background-color: $white
-            border-radius: 50%
-            transition: all .35s ease-in-out
-
-    input
-        opacity: 0
-        +sz(54px, 28px)
-        z-index: 1
-        cursor: pointer
-
-        // &.active + .switch__slide, &:checked + .switch__slide
-        // 	border-color: $black
-            
-        &.active + .switch__slide, &:checked + .switch__slide
-            &::before
-                transform: translateX(23px)
-                background-color: $white
-
-            svg
-                color: $white
-                &:last-child
-                    color: $black

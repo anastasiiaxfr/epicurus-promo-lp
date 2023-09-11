@@ -1,4 +1,15 @@
 ---
+hero:
+  enable: true
+  title: Crypto Investment Platform
+  sub_title: Legal. Safe. Secure.
+  description: Take advantage of our investment tools and earn passive income. Strategies, risk, and money management provided by Epicurus.
+  label: Welcome to Epicurus
+  img: '../images/hero-img.svg'
+  btns:
+    - label: Get Started Now
+      link: "#"
+      
 section_1:
   enable: true
   type: video
@@ -10,17 +21,6 @@ section_1:
   btn:
     label: Join Us Now
     link: #
-
-section_2:
-  enable: true
-  type: img
-  direction: right
-  title: Innovative **Robotic Trading**
-  text: Robotic trading that allows investors to trade in the cryptocurrency market without the need for constant monitoring. Our algorithms use various indicators and strategies to determine the optimal entry and exit points for positions.
-  img: '../images/img-1.svg'
-  btn:
-    label: Learn More
-    link: # 
 
 section_3:
   enable: true
@@ -38,7 +38,7 @@ section_4:
   type: img
   direction: right
   title: Innovative **Robotic Trading**
-  text: Earn on cryptocurrency market volatility in 3 clicks. Do not waste time setting up bots, we have already done setting up strategies. Just choose one or more bots to get more income.
+  text: Earn on cryptocurrency market volatility in 3 clicks. Do not waste time setting up bots. We have already developed all the strategies. Just choose one or more bots to get more income.
   img: '../images/img-3.svg'
   btn:
     label: Learn More
@@ -62,7 +62,7 @@ section_6:
   direction: right
   title: | 
     **Deposits** Based on **Smart Contracts**
-  text: Get a fixed income while your assets are working on the crypto market. The interest payment is guaranteed by the Ricarian smart contract. Automatic execution, protection by EU law.
+  text: Get a fixed income while your assets are working on the crypto market. The interest payment is guarantee by the Ricardian smart contract. Automatic execution, protection by EU law.
   img: '../images/img-5.svg'
   btn:
     label: Learn More
@@ -71,12 +71,12 @@ section_6:
 section_7:
   enable: true
   items: 
-    - title: Four Innovative Tools
+    - title: Three Innovative Tools
       desc: They will help you to increase your budget easily
       img: '../images/pic-1.svg'
     - title: Easy Management
       desc: You can easily create and manage the products you have chosen
       img: '../images/pic-2.svg'
     - title: Statistics Tracking
-      desc: Track and capture you profits with scatter charts
+      desc: Track and capture your profits with scatter charts
       img: '../images/pic-3.svg'

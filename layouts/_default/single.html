@@ -1,6 +1,35 @@
-<div class="hero__wrap" style="background-image: url({{ `../images/hero2.jpg` | relURL }});">
-	<!-- BEGIN section -->
-	{{- partial "header.html" . -}}
-	
-	<!-- END section -->
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<div class="page__content">
+    <div class="container">
+
+        {{ "<!-- Section -->" | safeHTML }}
+        <article class="hero__wrap">
+            {{- partial "header.html" . -}}
+        </article>
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+       
+
+    </div>
 </div>
+
+{{ "<!-- Section -->" | safeHTML }}
+<section class="section_background">
+  <div class="container">
+    
+    {{ .Scratch.Set "label" "More Products" }}
+    {{ .Scratch.Set "title" "Check Out Other Products" }}
+    {{- partial "_hgroup.html" . -}}
+
+    {{- partial "_products-tm.html" . -}}
+
+  </div>
+</section>
+{{ "<!-- End of Section -->" | safeHTML }}
+
+<div class="container">
+    {{- partial "_footer.html" . -}}
+</div>
+{{ end }}

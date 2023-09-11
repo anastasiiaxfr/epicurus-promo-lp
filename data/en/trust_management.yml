@@ -1,0 +1,38 @@
+---
+hero:
+  enable: true
+  title: Organize your daily workwith **Trust Management**
+  description: We enable investors to securely multiply their investments through API key management. Investors can monitor their investments and follow our analysts trading progress on cryptocurrency exchanges safely and conveniently.
+  label: Robotic Trading
+  img: '../images/hero-trust-management.svg'
+  btns:
+    - label: Get Started Now
+      link: "#"
+      type: "bg"
+    - label: Learn More
+      link: "#"
+      type: "bd"
+
+products:
+  - img: '../images/rt-4.svg'
+    title: Robotic Trading
+    link: '/robotic-trading'
+  - img: '../images/rt-2.svg'
+    title: Deposits
+    link: '/deposit'
+  - img: '../images/rt-3.svg'
+    title: Academy
+    link: '/academy'
+
+section_1:
+  enable: true
+  type: video
+  direction: left
+  title: Learn More About **Trust Management**
+  text: Thanks to our academy, which contains courses in the basics of technical analysis, fundamental analysis and risk management. Our experts will share their knowledge and experience with you, helping you develop your trading skills. Courses include different levels of difficulty for beginners.
+  img: '../images/og.jpg'
+  video: ''
+  btn:
+    label: Join Us Now
+    link: "#"
+     

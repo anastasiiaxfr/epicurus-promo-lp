@@ -1,16 +1,16 @@
 .header
     width: 100%
     margin: 0
+    border-bottom: 1px solid rgba($white, 0.1)
 
     @media only screen and (orientation: landscape)
         position: relative
 
     &-menu
-        +flex(flex, flex-start, space-between, wrap)
+        +flex(flex, center, space-between, nowrap)
         gap: $gap8*2
-
-        +maw($sm)
-            justify-content: center
+        padding-top: $gap8*0
+        padding-bottom: $gap8*2
 
 .footer
     &__top
@@ -19,7 +19,7 @@
         column-gap: 10%
         padding: $gap8*5 0
         border: 1px solid rgba($white, 0.1)
-        border-width: 2px 0
+        border-width: 1px 0
         +maw($sm)
             grid-template-columns: 1fr
             gap: $gap8*4
@@ -67,7 +67,7 @@
 
     &__menu
         display: grid
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(4, 1fr)
         gap: $gap8*4
         overflow: hidden
 
@@ -98,6 +98,10 @@
         +maw($xs)
             display: grid
             flex-wrap: wrap
-            gap: 32px
+            gap: $gap8*3
+
+        +maw($xxs)
+            gap: 0
+            row-gap: $gap8*2
 
    

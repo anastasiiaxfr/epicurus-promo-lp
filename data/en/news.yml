@@ -1,0 +1,16 @@
+---
+hero:
+  enable: true
+  label: Get Started Now
+  sub_title: For Investors, People, Enthusiasts
+  title: Innovative Platform
+  description: Epicurus is a simple ecosystem of interconnected crypto products designed for the mass adoptation of cryptocurrencies.
+  img: '../images/hero-img.svg'
+  
+hero_news:
+  enable: true
+  label: Our Blog
+  title: Latest News
+  description: Stay up-to-date with the latest updates and improvements to Epicurus through our comprehensive Roadmap Block.
+
+  

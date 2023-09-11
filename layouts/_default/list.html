@@ -1,19 +1,22 @@
 {{ define "main" }}
-<div class="hero__wrap" style="background-image: url({{ `../images/hero.jpg` | relURL }});">
-  <!-- BEGIN section -->
-  {{- partial "header.html" . -}}
-  
-  {{- partial "_hero.html" . -}}
-  <!-- END section -->
-  </div>
-<article class="page__single">
+{{ $data := index .Site.Data .Site.Language.Lang }}
 
-  {{- partial "header.html" . -}}
+<div class="page__content">
+    <div class="container">
+       
+        {{- partial "header.html" . -}}
+        <section class="page__text">
+            <h1 class="hero__title">{{ .Title | markdownify }}</h1>
+    
+        {{ if .Content }}
+            {{ .Content }}
+        {{ end }}
+        </section>
 
- 
+    </div>
+</div>  
 
-</article>
-
+<div class="container">
+    {{- partial "_footer.html" . -}}
+</div>
 {{ end }}
-
-

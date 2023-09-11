@@ -1,21 +1,31 @@
 .hero
     margin: auto
 
+    .btns
+        margin-top: $gap8*4
+
     &__wrap
         position: relative
         flex: 1 0 auto
         +flex(flex, center, center, nowrap)
         flex-direction: column
-        margin: 0 auto $gap8*4
-        padding: $gap8*4 $gap8*4 0
+        width: 100%
+        margin: 0 auto
+        padding: 0
         //background-color: $dark1
-        background: $dark1 url('../images/bg-hero.svg') no-repeat 50%/cover
-        border-radius: $brs48
+        background-image: url('../images/bg-hero.svg') 
+        background-repeat: no-repeat
+        background-size: contain
+        //border-radius: $brs48
         overflow: hidden
 
-        +maw($md)
-            border-radius: $brs28
-
+        &::after
+            content: ''
+            +flex(flex, center, center, nowrap)
+            +ps(absolute, (b, 0))
+            +sz(100%, 25%)
+            background: linear-gradient(transparent, $dark)
+          
     &__header
         +ft(54, 54*1.4, 800)
         text-transform: initial
@@ -33,11 +43,13 @@
             +ft(24, 24*1.4, 800)
 
     &__content
-        max-width: 800px
+        max-width: 960px
         margin-left: auto
         margin-right: auto
-        padding-top: 5vmax
-        padding-bottom: 5vmax
+        padding-top: 4vmax
+        padding-bottom: 4vmax
+        text-align: center
+        
 
     &__label
         +flex(inline-flex, center, center, nowrap)
@@ -49,10 +61,10 @@
         +ft(16, 16, 500)
 
     &__sub
-        +ft(36, 36*1.4, 600)
+        +ft(36, 36*1.4, 800)
         color: $main
         +maw($md)
-            +ft(28, 28*1, 600)
+            +ft(28, 28*1, 800)
         +maw($sm)
             +ft(20, 20*1, 800)
             text-transform: uppercase
@@ -60,7 +72,7 @@
 
     &__desc
         max-width: 800px
-        margin: $gap8*4 auto
+        margin: $gap8*4 auto 0
         +ft(20, 20*1.4, 500)
         letter-spacing: 0.02em
         color: $grey2
@@ -68,36 +80,18 @@
         +maw($md)
             +ft(16, 16*1.4, 500)
 
+    &__title
+        @extend .mt-0
+        +ft(32, 32*1.4, 800)
+        color: $main
+
     &__img
         position: absolute
         inset: 0
 
     &__background
         img
-            max-width: 1366px
-            width: 90%
+            //max-width: 1366px
+            //width: 90%
+            max-width: 100%
 
-    &__bg
-        z-index: -1
-        +ps(absolute, (t, 0), (b, 0), (r, 0), (l, 0))
-        margin: auto
-        display: flex
-        justify-content: center
-        img
-            position: absolute
-            &:last-child
-                max-width: 402px
-                width: 100%
-                top: auto
-                bottom: 0
-                right: auto
-                left: calc(50% - 402px)
-            &:first-child
-                width: 100px
-                margin: auto
-                top: 20%
-                left: 10%
-                right: 0
-                bottom: auto
-                transform: scale(2)
-  

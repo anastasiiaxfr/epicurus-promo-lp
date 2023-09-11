@@ -1,0 +1,45 @@
+.product
+    margin: 0
+    user-select: none
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) 
+        gap: $gap8*4
+        row-gap: $gap8*4
+        margin-top: var(--gap50)
+
+    &__img
+        position: relative
+        width: 100%
+        padding-top: 75%
+        //background-color: $dark
+
+        img
+            position: absolute
+            inset: 0
+            display: block
+            +sz(100%, 100%)
+            border-radius: $brs28
+            object-fit: cover
+
+    &__title
+        position: absolute
+        inset: 0
+        padding: $gap8*3
+        @extend %text
+        +ft(28, 28*1.4, 800)
+        text-align: left
+
+    +maw($md)
+        &__wrap
+            grid-template-columns: 1fr 1fr
+
+        &__title
+            +ft(20, 20*1.4, 800)
+
+    +maw($xs)
+        &__wrap
+            grid-template-columns: 1fr
+            margin-top: 25px
+
+        

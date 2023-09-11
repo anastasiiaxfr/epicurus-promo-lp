@@ -11,7 +11,9 @@ body
 *
     //user-select: none
     &::selection
-        background-color: $dark
+        background-color: $main
+        color: $white 
+        opacity: 1
 
 a
     text-decoration: none
@@ -48,3 +50,26 @@ button, a, input
         width: 100%
         margin-left: auto
         margin-right: auto
+
+        .container
+            display: flex
+            flex-direction: column
+            gap: $gap8*4
+
+    &__text
+        max-width: 960px
+        margin: 0 auto $gap8*4
+        padding: $gap8*4
+        +ft(13, 13*1.6, 400)
+        letter-spacing: 0.05em
+
+        & > *:first-child
+            margin-top: 0
+
+        h1, h2, h3, h4, h5, h6
+            margin-top: $gap8*4
+            margin-bottom: $gap8*2
+            +ft(20, 20*1.4, 800)
+
+        p
+            color: rgba($white, 0.5)

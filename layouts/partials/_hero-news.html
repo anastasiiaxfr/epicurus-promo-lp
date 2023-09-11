@@ -1,0 +1,56 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.news.hero }}
+    {{ with $data.news.hero }}
+
+        <section class="hero">
+            <div class="container">
+            <div class="row">
+                <div class="mx-auto text-center">
+        
+                <div class="hero__content">
+                    {{ if .label }}   
+                        <span span class="hero__label">
+                        <svg class="icon" width="16" height="16">
+                            <use xlink:href="#sparkle"></use>
+                        </svg>
+                        {{ .label }} 
+                        </span>
+                    {{ end }}
+                
+                    {{ if .sub_title  }}
+                        <div class="hero__sub">{{ .sub_title }}</div>
+                    {{ end }}
+                    <h1 class="hero__header">{{ .title | markdownify }}</h1>
+            
+                    <div class="hero__desc">
+                        {{ .description }}
+                    </div>
+            
+                    {{ if .btns }}
+                    <div class="btns">
+                        {{ range .btns }}
+                        <a href="{{ .link }}" class="btn {{ if eq .type "bd"}} btn--bd {{ end }} {{ if eq .type "bg" }} btn--bg {{ end }}" role="button"> 
+                            <b>
+                                <svg class="icon" width="16" height="16">
+                                    <use xlink:href="#arr-rt"></use>
+                                </svg>
+                            </b>
+                            {{ .label }} 
+                        </a>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+        
+                <div class="hero__background">
+                    <img src="{{ .img | relURL }}" alt="{{ .title }}">
+                </div>
+        
+                </div>
+            </div>
+            </div>
+        </section>
+
+    {{ end }} 
+{{ end }}
