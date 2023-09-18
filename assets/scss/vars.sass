@@ -223,7 +223,11 @@ $i: 0
     --gap100: 100px
     --gap50: 50px
     --maw: 1440px
+    --maw-sm: 1120px
+    --maw-xs: 960px
+    --brs28: 28px
     +maw($md)
+        --brs28: 18px
         --gap200: 100px
         --gap100: 50px
         --gap50: 50px
@@ -262,7 +266,7 @@ $i: 0
     margin: 0
     background-color: $dark3
     box-shadow: inset 0 0 150px 10px $black
-    border-radius: $brs28
+    border-radius: var(--brs28)
     overflow: hidden
 
 %text
@@ -275,6 +279,6 @@ $i: 0
         background-color: $dark1
         border-radius: $brs48
         +maw($md)
-            border-radius: $brs28
+            border-radius: var(--brs28)
 
        

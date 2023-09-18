@@ -1,0 +1,39 @@
+.author
+    &__wrap
+        margin: var(--gap100) auto 0
+        padding: $gap8*4
+        background-color: $dark1
+        border-radius: var(--brs28)
+
+        h1, h2, h3, h4, h5, h6
+            margin-top: 0
+
+    &__description
+        opacity: 0.5
+        +ft(15, 15*1.4, 400)
+
+    &__data
+        display: grid
+        grid-template-columns: auto 1fr
+        align-items: center
+        gap: $gap8*2
+        margin-top: $gap8*4
+
+    &__title
+        +ft(18, 18*1.4, 400)
+
+    &__subtitle
+        +ft(14, 14*1.4, 400)
+        opacity: 0.5
+
+    &__img
+        +sz(76px, 76px)
+        border-radius: 50%
+
+        & *
+            display: block
+            +sz(100%, 100%)
+            border-radius: 50%
+            object-fit: cover
+
+

@@ -1,0 +1,40 @@
+{{ $img := .Scratch.Get "img" }}
+{{ $label := .Scratch.Get "label" }}
+{{ $title := .Scratch.Get "title" }}
+{{ $description := .Scratch.Get "description" }}
+
+
+<section class="hero">
+    <div class="container">
+    <div class="row">
+        <div class="mx-auto text-center">
+
+        <div class="hero__content hero__content--sm">
+            {{ if $label }}   
+                <span span class="hero__label">
+                <svg class="icon" width="16" height="16">
+                    <use xlink:href="#sparkle"></use>
+                </svg>
+                {{ $label }} 
+                </span>
+            {{ end }}
+        
+            <h1 class="hero__header">{{ $title | markdownify }}</h1>
+    
+            <div class="hero__desc">
+                {{ $description }}
+            </div>
+        </div>
+
+        <div class="hero__background">
+            {{ if $img }}
+                <img src="{{ $img | relURL }}" alt="{{ $title }}" class="blogs__img" />
+            {{ else }}
+                <img src="{{ `/images/og.jpg` | relURL }}">
+            {{ end }}
+        </div>
+
+        </div>
+    </div>
+    </div>
+</section>

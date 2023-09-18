@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<div class="page__content">
+    <div class="container">
+
+        {{ "<!-- Section -->" | safeHTML }}
+        <article class="hero__wrap">
+            {{ partial "header.html" . }}
+            {{ .Scratch.Set "img" .Params.img }}
+		    {{ .Scratch.Set "label" "Epicurus Blog" }}
+		    {{ .Scratch.Set "title" .Params.title }}
+            {{ .Scratch.Set "description" .Params.description }}
+            {{ partial "_hero-single.html" . }}
+        </article>
+        {{ "<!-- End of Section -->" | safeHTML }}
+
+    </div>
+</div>
+
+{{ "<!-- Section -->" | safeHTML }}
+<article class="page__single">
+   <div>
+    {{- partial "_soc-sm.html" . -}}
+   </div>
+   <div>
+        {{ if .Content }}
+            {{ .Content }}
+        {{ end }}
+
+        {{ .Scratch.Set "description" "Mastering CSS Grid layouts is a game-changer for web designers seeking complete control and flexibility in their designs. With a solid understanding of the fundamentals, you can confidently dive into building complex and visually stunning layouts." }}
+        {{ .Scratch.Set "fio" .Params.author}}
+        {{ .Scratch.Set "job" "CEO" }}
+        {{- partial "_authors.html" . -}}
+        
+   </div>
+</article>
+{{ "<!-- End of Section -->" | safeHTML }}
+
+{{ "<!-- Section -->" | safeHTML }}
+<section class="section_related container">
+
+    <h2 class="mb-3 mb-lg-5">Continue Reading</h2>
+    {{ $currentTitle := .Title }}
+
+    {{ $related := where $.Site.RegularPages "Section" "news" }}
+    {{ $related := where $related "Title" "ne" $currentTitle }} 
+    {{ $related := first 3 $related }} 
+    <div class="section_related__wrap">
+    {{ range $related }}
+        {{- partial "_news-item.html" . -}}
+    {{ end }}
+    </div>  
+    <div class="mt-3 mt-lg-5">
+        <a href="/news" class="btn">See all Blogs</a>
+    </div>
+
+</section>
+{{ "<!-- End of Section -->" | safeHTML }}
+
+<div class="container">
+    {{- partial "_footer.html" . -}}
+</div>
+{{ end }}

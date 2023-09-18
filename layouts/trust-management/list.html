@@ -29,6 +29,45 @@
                 {{ "<!-- End of Section -->" | safeHTML }}
             </div>
 
+            <div class="my-4 my-sm-0">
+                {{ .Scratch.Set "label" "Workflow" }}
+                {{ .Scratch.Set "title" "Workflow of Trust Management" }}
+                {{- partial "_hgroup.html" . -}}
+            </div>
+
+            {{ if $data.trust_management.slider }} 
+            {{ with $data.trust_management.slider }}
+            <div class="slide__wrap">
+                <div>
+                    <h3 class="slide__title">
+                        {{ .title }}
+                    </h3>
+                    <div class="slide__sub">
+                        {{ .sub_title }}
+                    </div>
+                    <div class="section_text">
+                        {{ .description }}
+                    </div>
+                    {{ with .btn }}
+                    <a href="{{.link}}" class="btn">{{ .label }}</a>
+                    {{ end }}
+                </div>
+
+                <div class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                            {{ range .slides }}
+                              <li class="splide__slide">
+                                <img src="{{ .img | relURL }}" alt="{{ .title }}">
+                              </li>
+                            {{ end }}
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+
         </article>
         {{ "<!-- End of Section -->" | safeHTML }}
 

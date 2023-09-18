@@ -28,7 +28,7 @@
                 {{- partial "_hgroup.html" . -}}
             </div>
 
-            <div class="article__inner mt-5">
+            <div class="article__inner">
                 {{ "<!-- Section -->" | safeHTML }}
                 {{ if $data.homepage.section_4 }} 
                 {{ with $data.homepage.section_4 }}
@@ -48,7 +48,7 @@
                 {{ "<!-- End of Section -->" | safeHTML }}
             </div>
 
-            <div class="article__inner mb-5 pb-3">
+            <div class="article__inner">
                 {{ "<!-- Section -->" | safeHTML }}
                 {{ if $data.homepage.section_6 }} 
                 {{ with $data.homepage.section_6 }}
@@ -58,7 +58,7 @@
                 {{ "<!-- End of Section -->" | safeHTML }}
             </div>
        
-            <div class="py-5">
+            <div class="my-4">
                 {{ "<!-- Section -->" | safeHTML }}
                 {{ .Scratch.Set "label" "Benefits" }}
                 {{ .Scratch.Set "title" "New Investments Possibilities" }}
@@ -66,7 +66,7 @@
                 {{ "<!-- End of Section -->" | safeHTML }}
             </div>
 
-             <div class="article__inner mt-0">
+             <div class="article__inner mt-0 mt-sm-5">
                 {{ "<!-- Section -->" | safeHTML }}
                 {{ if $data.homepage.section_7 }} 
                 {{ with $data.homepage.section_7 }}

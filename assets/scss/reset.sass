@@ -46,7 +46,6 @@ button, a, input
         display: flex
         flex-direction: column
         flex: 1
-        gap: $gap8*0
         width: 100%
         margin-left: auto
         margin-right: auto
@@ -54,12 +53,12 @@ button, a, input
         .container
             display: flex
             flex-direction: column
-            gap: $gap8*4
+            gap: 0
 
     &__text
         max-width: 960px
-        margin: 0 auto $gap8*4
-        padding: $gap8*4
+        margin: 0 auto 
+        padding: $gap8*10 $gap8*4
         +ft(13, 13*1.6, 400)
         letter-spacing: 0.05em
 
@@ -73,3 +72,41 @@ button, a, input
 
         p
             color: rgba($white, 0.5)
+
+        +maw($xs)
+            padding: $gap8*3 $gap8
+
+    &__single
+        display: grid
+        grid-template-columns: auto 1fr
+        max-width: 900px
+        gap: $gap8*4
+        margin: var(--gap100) auto
+
+        +maw($sm)
+            grid-template-columns: 1fr
+
+        div
+            & > :first-child
+                margin-top: 0
+
+        h1, h2, h3, h4, h5, h6
+            margin-top: $gap8*4
+            margin-bottom: $gap8*2
+            letter-spacing: 0.05em
+
+        h1, h2
+            +ft(24, 24*1.4, 800)
+        
+        h3, h4, h5, h6
+            +ft(22, 22*1.4, 800)
+
+        a
+            text-decoration: underline
+            word-break: break-word
+            white-space: pre-wrap
+            color: $main
+
+        p, li
+            +ft(14, 14*1.4, 400)
+            opacity: 0.8

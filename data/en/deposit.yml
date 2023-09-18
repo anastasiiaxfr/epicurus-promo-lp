@@ -31,8 +31,19 @@ section_1:
   title: Learn More About **Deposits**
   text: Thanks to our academy, which contains courses in the basics of technical analysis, fundamental analysis and risk management. Our experts will share their knowledge and experience with you, helping you develop your trading skills. Courses include different levels of difficulty for beginners.
   img: '../images/og.jpg'
-  video: ''
+  video: 'https://www.youtube.com/embed/MubdXpjydqs?si=xjtFxGJLBLg288wy'
   btn:
     label: Join Us Now
     link: "#"
      
+slider:
+  title: How it works?
+  sub_title: It’s insanely easy to get started
+  description: Deposits based on smart contracts ensure the security of investments and guarantee automatic interest payments. Our deposits are based on the blockchain, which allows investors to control their investments and make a profit without intermediaries.
+  btn:
+    label: Learn More
+    link: "#"
+  slides:
+    - img: '../images/slider/dp-1.svg'
+    - img: '../images/slider/dp-2.svg'
+    - img: '../images/slider/dp-3.svg'

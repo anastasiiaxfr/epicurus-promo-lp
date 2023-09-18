@@ -32,6 +32,9 @@
                 margin-left: auto
                 margin-right: auto
 
+        +maw($xs)
+            gap: $gap8*2
+
     &_text
         margin-top: $gap8*5
         margin-bottom: $gap8*5
@@ -39,6 +42,7 @@
         color: $grey1
         +maw($md)
             margin-top: $gap8
+            margin-bottom: $gap8*2
         +maw($xs)
             +ft(14, 14*1.6, 400)
 
@@ -59,7 +63,7 @@
             padding-top: 75%
             margin: 0
             background-color: $dark
-            border-radius: $brs28
+            border-radius: var(--brs28)
             overflow: hidden
 
             img, button
@@ -71,7 +75,7 @@
                 display: block
                 +sz(100%, 100%)
                 object-fit: cover
-                border-radius: $brs28
+                border-radius: var(--brs28)
                 opacity: 0.5
 
         +maw($md)
@@ -96,10 +100,25 @@
         margin-top: var(--gap100)
         margin-bottom: var(--gap100)
 
+    &_related
+        max-width: var(--maw-sm)
+        margin-bottom: var(--gap100)
+        text-align: center
+
+        &__wrap
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr))
+            gap: $gap8*3
+
+            +maw($xs)
+                grid-template-columns: 1fr
+
     &_video
         img
             max-width: 100%
        
+    +maw($xs)
+        margin: $gap8*3 auto
 
 .article
     padding: 5%
@@ -112,9 +131,9 @@
         &:last-child
             margin-bottom: 0
         +maw($md)
-            margin: 100px auto
+            margin: 50px auto 100px
         +maw($xs)
-            margin: 50px auto
+            margin: 0 auto
            
 
     

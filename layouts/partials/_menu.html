@@ -1,0 +1,41 @@
+<ul class="menu">
+    <li class="menu__item">
+        <a class="menu__link" href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Params.Home }}</a>
+    </li> 
+    {{ range .Site.Menus.main }} 
+    {{ if .HasChildren }}
+    <li class="menu__item dropdown">
+      <a
+        class="menu__link dropdown-toggle"
+        href="#"
+        role="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        {{ .Name }}
+      </a>
+      <div class="dropdown-menu">
+        {{ range .Children }}
+        <a class="dropdown-item" href="{{ .URL | relLangURL }}"
+          >{{ .Name }}</a
+        >
+        {{ end }}
+      </div>
+    </li>
+    {{ else }}
+    <li class="menu__item">
+      <a class="menu__link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+    </li>
+    {{ end }} 
+    {{ end }}
+</ul>
+
+<button class="menu__toggle">
+    <svg class="icon" width="24" height="24">
+        <use xlink:href="#menu-toggle"></use>
+    </svg>
+    <svg class="icon" width="24" height="24">
+        <use xlink:href="#menu-close"></use>
+    </svg>
+</button>

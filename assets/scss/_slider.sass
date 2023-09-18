@@ -1,0 +1,52 @@
+.slide
+    &__wrap
+        display: grid
+        grid-template-columns: 1fr 650px
+        align-items: center
+        gap: 32px
+        margin-top: var(--gap50)
+
+        +maw($sm)
+            grid-template-columns: 1fr
+            text-align: center
+
+            div:last-child
+                order: -1
+
+        +maw($xs)
+            margin-top: $gap8*2
+
+    &__title
+        margin-bottom: 0
+    
+    &__sub
+        +ft(30, 30*1.2, 600)
+        color: $main
+
+    &__description
+        margin-top: 40px
+        opacity: 0.5
+        +ft(16, 16*1.4, 400)
+
+.splide
+    &__arrow
+        //display: none !important
+
+    &__slide
+        //height: auto
+        padding: $gap8*2
+        border-radius: var(--brs28)
+        overflow: hidden
+
+        img
+            +sz(100%, 100%)
+            object-fit: contain
+            border-radius: var(--brs28)
+
+        +maw($xs)
+            padding: 0 !important
+            img
+                +sz(90%, 90%)
+                margin: 5% 10% 5% 0
+
+      

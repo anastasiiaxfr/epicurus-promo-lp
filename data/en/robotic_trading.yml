@@ -31,8 +31,19 @@ section_1:
   title: Learn More About **Robotic Trading**
   text: Thanks to our academy, which contains courses in the basics of technical analysis, fundamental analysis and risk management. Our experts will share their knowledge and experience with you, helping you develop your trading skills. Courses include different levels of difficulty for beginners.
   img: '../images/og.jpg'
-  video: ''
+  video: 'https://www.youtube.com/embed/MubdXpjydqs?si=xjtFxGJLBLg288wy'
   btn:
     label: Join Us Now
     link: "#"
      
+slider:
+  title: How it works?
+  sub_title: It’s insanely easy to get started
+  description: Robotic trading that allows investors to trade in the cryptocurrency market without the need for constant monitoring. Our algorithms use various indicators and strategies to determine the optimal entry and exit points for positions.
+  btn:
+    label: Learn More
+    link: "#"
+  slides:
+    - img: '../images/slider/rt-1.svg'
+    - img: '../images/slider/rt-2.svg'
+    - img: '../images/slider/rt-3.svg'

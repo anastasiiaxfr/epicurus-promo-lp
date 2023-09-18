@@ -10,3 +10,14 @@
         &:hover, &:active, &:focus
             background-color: $main
             fill: $white
+    &--sm
+        flex-direction: column
+
+        a
+            border-radius: 50%
+            border: 2px solid $dark2
+            background: transparent
+            fill: $white
+
+        +maw($sm)
+            flex-direction: row

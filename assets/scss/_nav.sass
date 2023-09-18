@@ -1,4 +1,5 @@
 .header
+    position: relative
     width: 100%
     margin: 0
     border-bottom: 1px solid rgba($white, 0.1)
@@ -12,6 +13,10 @@
         padding-top: $gap8*0
         padding-bottom: $gap8*2
 
+        +maw($md)
+            .btn
+                margin-left: auto
+
 .footer
     &__top
         display: grid
@@ -20,6 +25,7 @@
         padding: $gap8*5 0
         border: 1px solid rgba($white, 0.1)
         border-width: 1px 0
+           
         +maw($sm)
             grid-template-columns: 1fr
             gap: $gap8*4
@@ -45,6 +51,10 @@
             +ft(13, 13*1.4, 400)
             opacity: 0.4
 
+        +maw($sm)
+            align-items: center
+            text-align: center
+
         +maw($xs)
             justify-content: center
             align-items: center
@@ -69,7 +79,8 @@
         display: grid
         grid-template-columns: repeat(4, 1fr)
         gap: $gap8*4
-        overflow: hidden
+        margin-left: auto
+        margin-right: auto
 
         &-group
             margin-bottom: $gap8*2
@@ -104,4 +115,85 @@
             gap: 0
             row-gap: $gap8*2
 
-   
+.menu
+    +flex(flex, center, center, nowrap)
+    gap: $gap8
+    margin: 0
+    padding: $gap8 $gap8
+    letter-spacing: 0.02em
+    list-style-type: none
+    background-color: $dark2
+    border-radius: var(--brs28)
+
+    &.active
+        display: block
+        +ps(absolute, (l, 0), (r, 0), (t, 75px))
+
+    +maw($md)
+        display: none
+        padding: 16px 10px
+        border-radius: 10px
+
+    &__toggle
+        display: none
+        order: 1
+        background: transparent
+        border: none
+
+        svg:last-child
+            display: none
+
+        &.active
+            svg
+                &:last-child
+                    display: block
+                &:first-child
+                    display: none
+
+        +maw($md)
+            display: block
+
+    &__item
+        +ft(14, 14, 600)
+        letter-spacing: 0.05em
+        transition: $trs
+        cursor: pointer
+        
+    &__link
+        +flex(flex, center, flex-start, nowrap)
+        gap: $gap8
+        padding: $gap8*1.5 $gap8*2
+
+        &:hover, &:active, &:focus
+            color: $main
+
+        +maw($md)
+            padding: $gap8 $gap8*2
+            text-transform: uppercase
+
+    .dropdown-menu
+        padding: $gap8
+        color: $white
+        background-color: $dark1
+        border-radius: var(--brs28)
+        border: none
+
+        +maw($md)
+            position: relative
+            padding: 0
+            background-color: transparent
+
+        a
+            padding: $gap8*1.5 $gap8*2
+            +ft(14, 14*1.4, 600)
+            border-radius: var(--brs28)
+            color: inherit
+            opacity: 0.8
+            transition: $trs
+            &:hover, &:active, &:focus
+                color: $main
+                background-color: $dark3
+                opacity: 1
+            +maw($md)
+                padding: $gap8 $gap8*2
+                text-transform: uppercase

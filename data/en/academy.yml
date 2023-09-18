@@ -31,8 +31,19 @@ section_1:
   title: Learn More About **Academy**
   text: Thanks to our academy, which contains courses in the basics of technical analysis, fundamental analysis and risk management. Our experts will share their knowledge and experience with you, helping you develop your trading skills. Courses include different levels of difficulty for beginners.
   img: '../images/og.jpg'
-  video: ''
+  video: 'https://www.youtube.com/embed/MubdXpjydqs?si=xjtFxGJLBLg288wy'
   btn:
     label: Join Us Now
     link: "#"
      
+slider:
+  title: How it works?
+  sub_title: It’s insanely easy to get started
+  description: We enable investors to securely multiply their investments through API key management. Investors can monitor their investments and follow our analysts' trading progress on cryptocurrency exchanges safely and conveniently.
+  btn:
+    label: Learn More
+    link: "#"
+  slides:
+    - img: '../images/slider/ac-1.svg'
+    - img: '../images/slider/ac-2.svg'
+    - img: '../images/slider/ac-3.svg'

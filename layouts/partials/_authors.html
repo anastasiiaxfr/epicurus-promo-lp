@@ -1,0 +1,28 @@
+{{ $description := .Scratch.Get "description" }}
+{{ $fio := .Scratch.Get "fio" }}
+{{ $job := .Scratch.Get "job" }}
+{{ $ava := .Scratch.Get "ava" }}
+
+<section class="section author__wrap">
+    <h3>Conclusion</h3>
+    <div class="author__description">
+        {{ $description }}
+    </div>
+    <div class="author__data">
+        <div class="author__img">
+        {{ if $ava }}
+            <img src="{{ $ava | relURL }}" alt="{{ $fio }}" />
+        {{ else }}
+            <img src="{{ `/images/og.jpg` | relURL }}">
+        {{ end }}
+         </div>
+        <div class="author__info">
+            <div class="author__title">
+                {{ $fio }}
+            </div>
+            <div class="author__subtitle">
+                {{ $job }}
+            </div>
+        </div>
+    </div>
+</section>

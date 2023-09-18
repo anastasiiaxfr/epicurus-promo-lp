@@ -1,0 +1,26 @@
+{
+  "name": "epicurus-promo-lp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tinacms dev -c \"hugo server -D\"",
+    "build": "tinacms build && hugo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anastasiiaxfr/epicurus-promo-lp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anastasiiaxfr/epicurus-promo-lp/issues"
+  },
+  "homepage": "https://github.com/anastasiiaxfr/epicurus-promo-lp#readme",
+  "dependencies": {
+    "@tinacms/cli": "^1.5.29",
+    "tinacms": "^1.5.20"
+  }
+}

@@ -31,6 +31,11 @@ languageCode = "en"
 languageName = "ENG"
 weight = 1
 
+[related]
+    threshold = 0 
+    includeNewer = true
+    toLower = false
+
 # [Languages.ua.params.form]
 # action = "#"
 # enable = true
@@ -80,10 +85,14 @@ site_url = "#"
 
 description = "An innovative platform for investors, people, enthusiasts"
 
-# [[params.plugins.js]]
-# link = "plugins/js/jquery.min.js"
-# [[params.plugins.js]]
-# link = "plugins/js/bootstrap.bundle.min.js"
+[[params.plugins.js]]
+link = "plugins/js/fancybox/fancybox.js"
+[[params.plugins.css]]
+link = "plugins/js/fancybox/fancybox.css"
+[[params.plugins.js]]
+link = "plugins/js/slider/splide.min.js"
+[[params.plugins.css]]
+link = "plugins/js/slider/splide.min.css"
 
 [taxonomies]
 category = "categories"
@@ -121,24 +130,80 @@ link = "https://www.linkedin.com/in/international-trade-group"
 icon = "linkedin" 
 icon_sm = "ln"
 
+
+[[params.share]]
+label = "fb"
+title = "Facebook"
+link = "https://www.facebook.com/sharer/sharer.php?u=" 
+icon_sm = "fb"
+
+[[params.share]]
+label = "tw"
+title = "Twitter"
+link = "https://twitter.com/intent/tweet?text=" 
+icon_sm = "tw"
+
+[[params.share]]
+label = "tm"
+title = "Telegram"
+link = "https://t.me/share/url?url=" 
+icon_sm = "tm"
+
 ############################# footer #################################
 [params.footer]
     copyright = "Epicurus &copy; 2023 All Rights Reserved"
     copyright_text = "Multifunctional platform, your one-stop tool. Created specifically for investors and traders who strive to achieve financial success."
+
+# main menu
+[[menu.main]]
+URL = "/about-us"
+name = "About Us"
+weight = 1
+
+[[menu.main]]
+URL = "/news"
+name = "Blogs"
+weight = 2
+
+[[menu.main]]
+name = "Products"
+url = "/products"
+weight = 3
+identifier = "products"
+
+[[menu.main]]
+name = "Robotic Trading"
+parent = "products"
+url = "/robotic-trading"
+weight = 1
+[[menu.main]]
+name = "Trust Management"
+parent = "products"
+url = "/trust-management"
+weight = 2
+[[menu.main]]
+name = "Epicurus Deposits"
+parent = "products"
+url = "/epicurus-deposits"
+weight = 3
+[[menu.main]]
+name = "Academy"
+parent = "products"
+url = "/academy"
+weight = 4
 
 [[params.nav]]
     title = "Home"
     URL = "/"
 [[params.nav]]
     title = "About Us"
-    URL = "/"
+    URL = "/about-us"
 [[params.nav]]
     title = "Blogs"
-    URL = "/"
+    URL = "/news"
 [[params.nav]]
     title = "Products"
-    URL = "/"
-
+    URL = "/products"
 
 [[menu.footer]]
 name = "Company"
@@ -148,23 +213,24 @@ hasChildren = true
     [[menu.footer]]
     parent = "company"
     name = "About us"
-    URL = "/"
+    URL = "/about-us"
     weight = 1
     [[menu.footer]]
     parent = "company"
     name = "Careers"
-    URL = "/"
+    URL = "/careers"
     weight = 2
     [[menu.footer]]
     parent = "company"
     name = "Our Brand"
-    URL = "/"
+    URL = "/our-brands"
     weight = 3
     [[menu.footer]]
     parent = "company"
     name = "News"
-    URL = "/"
+    URL = "/news"
     weight = 4
+
 [[menu.footer]]
 name = "Ecosystem"
 weight = 2
@@ -173,24 +239,23 @@ hasChildren = true
     [[menu.footer]]
     parent = "ecosystem"
     name = "Roadmap"
-    URL = "/"
+    URL = "/roadmap"
     weight = 1
     [[menu.footer]]
     parent = "ecosystem"
     name = "For Investors"
-    URL = "/"
+    URL = "/for-investors"
     weight = 2
     [[menu.footer]]
     parent = "ecosystem"
     name = "Business Angel"
-    URL = "/"
+    URL = "/business-angel"
     weight = 3
     [[menu.footer]]
     parent = "ecosystem"
     name = "Partners"
-    URL = "/"
+    URL = "/partners"
     weight = 4
-
 
 [[menu.footer]]
 name = "Products"
@@ -200,26 +265,23 @@ hasChildren = true
     [[menu.footer]]
     parent = "products"
     name = "Robotic Trading"
-    URL = "/"
+    URL = "/robotic-trading"
     weight = 1
     [[menu.footer]]
     parent = "products"
     name = "Trust Management"
-    URL = "/"
+    URL = "/trust-management"
     weight = 2
     [[menu.footer]]
     parent = "products"
     name = "Deposit"
-    URL = "/"
+    URL = "/deposit"
     weight = 3
     [[menu.footer]]
     parent = "products"
     name = "Academy"
-    URL = "/"
+    URL = "/academy"
     weight = 4
-
-
-
 
 [[menu.footer]]
 name = "Documentation"
@@ -229,31 +291,31 @@ hasChildren = true
     [[menu.footer]]
     parent = "documentation"
     name = "Terms and Conditions"
-    URL = "/"
+    URL = "/terms"
     weight = 1
     [[menu.footer]]
     parent = "documentation"
     name = "Privacy Policy"
-    URL = "/"
+    URL = "/policy"
     weight = 2
     [[menu.footer]]
     parent = "documentation"
     name = "Terms of use"
-    URL = "/"
+    URL = "/terms-of-use"
     weight = 3
     [[menu.footer]]
     parent = "documentation"
     name = "AML Policy"
-    URL = "/"
+    URL = "/aml-policy"
     weight = 4
     [[menu.footer]]
     parent = "documentation"
     name = "Cookie Policy"
-    URL = "/"
+    URL = "/cookie-policy"
     weight = 5
     [[menu.footer]]
     parent = "documentation"
     name = "Risk Warnings"
-    URL = "/"
+    URL = "/risk-warnings"
     weight = 6
 

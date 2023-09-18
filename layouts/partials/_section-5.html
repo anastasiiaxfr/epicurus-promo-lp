@@ -10,7 +10,7 @@
         </div>
         <div class="section_demo section_video">
             {{ if eq .type "video" }}
-                <figure>
+                <figure class="trigger" data-video="{{ .video }}">
                     <img src="{{ .img }}" alt="{{ .title }}">
                     <button class="btn_play">
                         <svg class="icon" width="16" height="16">
