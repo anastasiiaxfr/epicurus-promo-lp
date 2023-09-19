@@ -28,10 +28,16 @@
             {{ .Content }}
         {{ end }}
 
-        {{ .Scratch.Set "description" "Mastering CSS Grid layouts is a game-changer for web designers seeking complete control and flexibility in their designs. With a solid understanding of the fundamentals, you can confidently dive into building complex and visually stunning layouts." }}
-        {{ .Scratch.Set "fio" .Params.author}}
-        {{ .Scratch.Set "job" "CEO" }}
+        {{ $author := .Params.author | relURL }}
+        {{ $author := string $author }}
+        {{ with .GetPage $author }}
+        {{ .Scratch.Set "fio" (.Params.name | default "Epicurus Team") }}
+        {{ .Scratch.Set "job" (.Params.job | default "Editors") }}
+        {{ .Scratch.Set "ava" .Params.ava }}
+        {{ .Scratch.Set "description" $.Params.author_review }}
+
         {{- partial "_authors.html" . -}}
+        {{ end }}
         
    </div>
 </article>

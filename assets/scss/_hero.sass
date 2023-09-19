@@ -1,4 +1,5 @@
 .hero
+    width: 100%
     margin: auto
 
     .btns
@@ -50,6 +51,7 @@
     &__content
         //max-width: 960px
         max-width: var(--maw-xs)
+        width: 100%
         margin-left: auto
         margin-right: auto
         padding-top: 4vmax
@@ -58,6 +60,7 @@
          
         &--sm
             max-width: var(--maw-sm)
+            width: 100%
 
     &__label
         +flex(inline-flex, center, center, nowrap)
@@ -98,6 +101,8 @@
         inset: 0
 
     &__background
+        margin-left: auto
+        margin-right: auto
         img
             //max-width: 1366px
             //width: 90%

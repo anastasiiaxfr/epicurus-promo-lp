@@ -21,7 +21,7 @@
     &__top
         display: grid
         grid-template-columns: 1fr 2fr
-        column-gap: 10%
+        column-gap: 5%
         padding: $gap8*5 0
         border: 1px solid rgba($white, 0.1)
         border-width: 1px 0
@@ -102,7 +102,8 @@
                 +ft(12, 12*1.4, 400)
 
         +maw($sm)
-            grid-template-columns: 50% 50%
+            //width: 100%
+            grid-template-columns: 1fr 1fr
             a
                 +ft(12, 12*1.4, 400)
 
@@ -110,12 +111,14 @@
             display: grid
             flex-wrap: wrap
             gap: $gap8*3
+            column-gap: $gap8*4
 
         +maw($xxs)
-            gap: 0
             row-gap: $gap8*2
+            column-gap: $gap8*3
 
 .menu
+    position: relative
     +flex(flex, center, center, nowrap)
     gap: $gap8
     margin: 0
@@ -128,6 +131,7 @@
     &.active
         display: block
         +ps(absolute, (l, 0), (r, 0), (t, 75px))
+        z-index: 1000
 
     +maw($md)
         display: none
@@ -154,6 +158,7 @@
             display: block
 
     &__item
+        position: static
         +ft(14, 14, 600)
         letter-spacing: 0.05em
         transition: $trs
@@ -172,19 +177,28 @@
             text-transform: uppercase
 
     .dropdown-menu
+        width: 100%
         padding: $gap8
+        margin: $gap8*3 auto
+        left: 0
         color: $white
         background-color: $dark1
         border-radius: var(--brs28)
         border: none
+        text-align: center
 
         +maw($md)
             position: relative
             padding: 0
+            margin: 0
             background-color: transparent
+            text-align: left
 
         a
-            padding: $gap8*1.5 $gap8*2
+            width: fit-content
+            margin: 0 auto
+            padding: $gap8*2 $gap8*2
+            text-transform: uppercase
             +ft(14, 14*1.4, 600)
             border-radius: var(--brs28)
             color: inherit
@@ -195,5 +209,6 @@
                 background-color: $dark3
                 opacity: 1
             +maw($md)
+                margin: 0
                 padding: $gap8 $gap8*2
                 text-transform: uppercase

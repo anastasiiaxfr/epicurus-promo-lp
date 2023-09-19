@@ -1,23 +1,5 @@
-{{ $title := slice }}
-{{ $description := slice }}
-
-{{ if (.Params.title_before | or .Params.title_after) }}
-{{ $title = $title | append .Params.title_before }}
-{{ $title = $title | append .Title }}
-{{ $title = $title | append .Params.title_after }}
-{{ $title = delimit $title " " }}
-{{ else }}
-{{ $title = .Title }}
-{{ end }}
-
-{{ if (.Params.description_before | or .Params.description_after) }}
-{{ $description = $description | append .Params.description_before }}
-{{ $description = $description | append .Params.description }}
-{{ $description = $description | append .Params.description_after }}
-{{ $description = delimit $description " " }}
-{{ else }}
-{{ $description = .Params.description | or .Site.Params.description }}
-{{ end }}
+{{ $title := .Params.seo_title | or .Title }}
+{{ $description := .Params.seo_description | or .Site.Params.description }}
 
 <meta charset="utf-8">
 <title>Epicurus.io | {{ $title | truncate 60 }}</title>
@@ -54,7 +36,7 @@
 <!-- THE TWITTER MACHINE -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="{{ .Permalink }}" />
-<meta name="twitter:site" content="{{ .Site.Params.site_url }}">
+<meta name="twitter:site" content="{{ .Permalink }}">
 <meta name="twitter:creator" content="{{ .Site.Params.author }}">
 <meta name="twitter:title" content="Epicurus.io | {{ $title | truncate 60 }}">
 <meta name="twitter:description" content="{{ $description | truncate 160 }}">

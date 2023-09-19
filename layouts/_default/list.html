@@ -7,10 +7,10 @@
         {{- partial "header.html" . -}}
         <section class="page__text">
             <h1 class="hero__title">{{ .Title | markdownify }}</h1>
-    
-        {{ if .Content }}
-            {{ .Content }}
-        {{ end }}
+
+            {{ if .Content }}
+                {{ .Content }}
+            {{ end }}
         </section>
 
     </div>

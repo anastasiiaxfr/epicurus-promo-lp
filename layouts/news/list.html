@@ -8,6 +8,15 @@
         <article class="header__wrap">
             {{- partial "header.html" . -}}
             {{- partial "_hero-news-hero.html" . -}}
+            
+            {{ $paginator := .Paginate (where $.Site.RegularPages "Section" "news") }} 
+            <div class="blogs__wrap">
+            {{ range $paginator.Pages }}
+                {{- partial "_news-item.html" . -}}
+            {{ end }} 
+            </div>  
+            {{- partial "_pagination.html" . -}}
+
         </article>
         {{ "<!-- End of Section -->" | safeHTML }}
 
@@ -27,6 +36,7 @@
     {{ end }} 
     {{ end }}
 {{ "<!-- End of Section -->" | safeHTML }}
+
 
 
 <div class="container">

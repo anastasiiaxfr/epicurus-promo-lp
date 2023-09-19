@@ -11,7 +11,11 @@
         {{ .Params.title | truncate 35 }}
        </div>
        <div class="blogs__auth">
-        {{ .Params.author }}
+        {{ $author := .Params.author | relURL }}
+        {{ $author := string $author }}
+        {{ with .GetPage $author }}
+        {{ if .Params.name }} {{ .Params.name }} {{ else }} Epicurus Team {{ end }}
+        {{ end }}
        </div>
     </div>
 </a>

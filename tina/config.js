@@ -21,6 +21,31 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "author",
+        label: "Author",
+        path: "content/en/authors",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Full Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "job",
+            label: "Job",
+            required: true,
+          },
+          {
+            type: 'image',
+            label: 'Ava',
+            name: 'ava',
+          }
+        ],
+      },
+      {
         name: "news",
         label: "News",
         path: "content/en/news",
@@ -39,9 +64,48 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+            ui: {
+              timeFormat: "HH:mm"
+            },
+          },
+          {
+            label: 'Author',
+            name: 'author',
+            type: 'reference',
+            collections: ['author'],
+          },
+          {
+            type: "string",
+            name: "author_review",
+            label: "Author Conclusion",
+          },
+          {
+            type: "string",
+            name: "seo_title",
+            label: "SEO Title",
+          },
+          {
+            type: "string",
+            name: "seo_description",
+            label: "SEO Description",
+          },
+          {
             type: 'image',
             label: 'Image',
             name: 'img',
+          },
+          {
+            type: 'string',
+            name: 'tags',
+            label: 'Tags',
+            description: 'Tags for this post',
+            list: true,
+            ui: {
+              component: 'tags',
+            }
           },
           {
             type: "rich-text",

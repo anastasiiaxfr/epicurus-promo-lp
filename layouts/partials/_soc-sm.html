@@ -1,6 +1,6 @@
 <nav class="socials socials--sm">
    {{ range .Site.Params.share }}
-   <a class="share__link" href="{{ if eq .title "Telegram" }}{{ .link }}{{ $.Site.Params.site_url }}{{ $.Permalink }}&text={{ $.Params.title | truncate 100 }}{{ else }} {{ if eq .title "Twitter" }} {{ .link }}{{ $.Site.Params.site_url }}{{ $.Permalink }}{{ "\n\n" }}{{ $.Params.title | truncate 100 }} {{ else }}  {{ if eq .title "Facebook" }}{{ .link }}{{ $.Site.Params.site_url }}{{ $.Permalink | urlize }}&quote={{ $.Params.title | urlize }} {{ end }}{{ end }}{{ end }}">
+   <a class="share__link" href="{{ if eq .title "Telegram" }}{{ .link }}{{ $.Site.Params.site_url }}{{ $.Permalink }}&text={{ $.Params.title | truncate 100 }}{{ else }} {{ if eq .title "Twitter" }} {{ .link }} {{ $.Permalink }}{{ "\n\n" }}{{ $.Params.title | truncate 100 }} {{ else }}  {{ if eq .title "Facebook" }}{{ .link }}{{ $.Site.Params.site_url }}{{ $.Permalink | urlize }}&quote={{ $.Params.title | urlize }} {{ end }}{{ end }}{{ end }}">
          <svg class="icon" width="16" height="16">
             <use xlink:href="#{{ .icon_sm }}"></use>
          </svg>         

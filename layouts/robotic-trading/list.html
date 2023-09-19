@@ -14,10 +14,10 @@
         {{ "<!-- Section -->" | safeHTML }}
         <article class="article">
 
-            <div>
-                {{ .Scratch.Set "label" "Introduction" }}
-                {{- partial "_hgroup.html" . -}}
-            </div>
+        
+            {{ .Scratch.Set "label" "Introduction" }}
+            {{- partial "_hgroup.html" . -}}
+        
 
             <div class="article__inner">
                 {{ "<!-- Section -->" | safeHTML }}
